@@ -1,70 +1,40 @@
-NAME= libftprintf.a
+NAME= plagache.filler
 
-SRC = ft_printf.c\
-	  pwidth.c\
-	  pflags.c\
-	  pwidth.c\
-	  plenmodifier.c\
-	  pprecision.c\
-	  func_selector.c\
-	  global_tools.c\
-	  int.c\
-	  int_tools.c\
-	  unsigned.c\
-	  unsigned_tools.c\
-	  octal.c\
-	  octal_tools.c\
-	  percent.c\
-	  char.c\
-	  hexa.c\
-	  hexa_tools.c\
-	  hexa_upper.c\
-	  string.c\
-	  float.c\
-	  float_tools.c\
-	  double.c\
-	  double_tools.c\
-	  ldouble.c\
-	  ldouble_tools.c\
-	  address_tools.c\
-	  address.c\
-	  special.c\
-	  special_tools.c\
+SRCS= main.c\
+	  parsing.c\
+	  tools.c\
+
+
+OBJ= $(SRCS:.c=.o)
+
+LIBDIR= libft
+
+LIBA= $(LIBDIR)/libft.a
 
 CFLAGS= -Wall -Werror -Wextra
-
-HEADERPATH= includes
-
-LHEADERPATH= Libft/includes
-
-OBJDIR= obj
-
-OBJ= $(addprefix $(OBJDIR)/,$(SRCS:.c=.o))
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@make -C Libft/ --no-print-directory
-		@ar -rs Libft/libft.a $(OBJ) 
-		@cp Libft/libft.a .
-		@mv libft.a libftprintf.a
-		@echo "printf lib builded"
+	@make -s -C $(LIBDIR)
+	@gcc $(CFLAGS) -o $(NAME) $(OBJ) $(LIBA)
+	@echo "filler build complete"
 
-obj/%.o : srcs/%.c
-	@mkdir -p $(OBJDIR)
-	@gcc $(CFLAGS) -I $(HEADERPATH) -I $(LHEADERPATH) -o $@ -c $<
+%.o : %.c
+	@gcc -I $(LIBDIR) $(CFLAGS) -o $@ -c $<
 
 clean:
-		@rm -rf $(OBJDIR)
-		@make clean -C Libft/ --no-print-directory
-		@echo "printf objects cleaned"
+		@rm -rf $(OBJ)
+		@echo "filler objects cleaned"
+		@make clean -C $(LIBDIR)
 
 fclean:
-		@rm -rf $(OBJDIR)
-		@rm -rf $(NAME)
-		@make fclean -C Libft/ --no-print-directory
-		@echo "printf lib cleaned"
+		@make fclean -s -C $(LIBDIR)
+		@rm -f $(NAME)
+		@rm -rf $(OBJ)
+		@echo "filler objects cleaned"
+		@echo "filler project cleaned"
 
 re: fclean all
 
-.PHONY: clean all fclean re
+.PHONY: all clean fclean re

@@ -20,122 +20,6 @@
 ** - then write coor
 */
 
-/*
-** void	fill_file(int fd, char	*line)
-** {
-** 	int	ret;
-** 
-** 	while (ft_strstr(line, "Plateau") == NULL)
-** 	{
-** 		if (ret != -1)
-** 		{
-** 			ret = get_next_line(0, &line);
-** 			write(fd, line, ft_strlen(line));
-** 			write(fd, "\n", 1);
-** 			free(line);
-** 		}
-** 	}
-** }
-*/
-void		get_line_col(t_filler *info, char *str)
-{
-	int c;
-
-	c = 7;
-	while (ft_isdigit(str[c]) == 0)
-		c++;
-	info->line = atoi(str + c);
-	while (ft_isdigit(str[c]) == 1)
-		c++;
-	info->column = atoi(str + c);
-}
-
-int			get_board(t_filler *info)
-{
-	char 	*line;
-	int		l;
-
-	l = 0;
-	if (!(info->board = (char**)malloc(sizeof(char*) * (info->line + 1))))
-		return (-1);
-	info->board[info->line] = NULL;
-	get_next_line(0, &line);
-	free(line);
-	while(l < info->line)
-	{
-		if (!(info->board[l] = (char*)malloc(sizeof(char) * (info->column + 1))))
-			return (-1);
-		info->board[l][info->column] = '\0';
-		get_next_line(0, &line);
-		ft_strcpy(info->board[l], ft_strchr(line, '.'));
-		free(line);
-		l++;
-	}
-	return (0);
-}
-
-void		get_piece_line_col(t_filler *info, char *str)
-{
-	int c;
-
-	c = 5;
-	while (ft_isdigit(str[c]) == 0)
-		c++;
-	info->piece_line = atoi(str + c);
-	while (ft_isdigit(str[c]) == 1)
-		c++;
-	info->piece_column = atoi(str + c);
-}
-
-
-int			get_piece(t_filler *info)
-{
-	char 	*line;
-	int		l;
-
-	l = 0;
-	if (!(info->piece = (char**)malloc(sizeof(char*) * (info->piece_line + 1))))
-		return (-1);
-	info->piece[info->piece_line] = NULL;
-	while(l < info->piece_line)
-	{
-		if (!(info->piece[l] = (char*)malloc(sizeof(char) * (info->piece_column + 1))))
-			return (-1);
-		info->piece[l][info->piece_column] = '\0';
-		get_next_line(0, &line);
-		ft_strcpy(info->piece[l], line);
-		free(line);
-		l++;
-	}
-	return (l);
-}
-
-void		get_infos(int fd, t_filler *info)
-{
-	char		*line;
-	int			ret;
-
-	ret = get_next_line(0, &line);
-	if (ft_strstr(line, "$$$ exec p") != NULL)
-		info->piece_id = (line[11] == '1') ? "x" : "o";
-	free(line);
-	get_next_line(0, &line);
-	if (ft_strstr(line, "Plateau") != NULL)
-		get_line_col(info, line);
-	free(line);
-	ret = get_board(info);
-	while (ret-- > 0)
-	{
-		get_next_line(0, &line);
-		free(line);
-	}
-	get_next_line(0, &line);
-	if (ft_strstr(line, "Piece") != NULL)
-		get_piece_line_col(info, line);
-	get_piece(info);
-	dprintf(fd, "1line :|%i|\ncolumn :|%i|\nParsing OK\n", info->line, info->column);
-}
-
 int			main(void)
 {
 	int			fd_debug;
@@ -143,6 +27,8 @@ int			main(void)
 
 	fd_debug = open("output.txt", O_CREAT|O_RDWR|O_APPEND);
 	get_infos(fd_debug, &info);
+	get_init_pos(&info);
+	dprintf(fd_debug, "|X %i||Y %i||Xop %i||Yop %i|", info.init_X, info.init_Y, info.init_op_X, info.init_op_Y);
 	close(fd_debug);
 	ft_printf("8 2\n");
 	return (0);
@@ -160,7 +46,7 @@ int			main(void)
 **
 ** 2) Read board and piece
 ** Prog reads the game board like so:
-** Plateau Lne Col:
+** Plateau Lne 14  Col 30:
 **     01234567890134567890123456789
 ** 000 .............................
 ** 001 .............................
@@ -179,7 +65,7 @@ int			main(void)
 **
 ** 
 ** Prog reads the pieces like so:
-** Piece Lne Col:
+** Piece Lne 4 Col 7:
 **  ...*...
 **  ...*...
 **  ...*...

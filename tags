@@ -119,14 +119,16 @@ ft_toupper	libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 ftoa_double	libft/srcs/double.c	/^int		ftoa_double(t_s_e_m *dble, t_conv_id *s_ptr)$/;"	f
 ftoa_ldouble	libft/srcs/ldouble.c	/^int		ftoa_ldouble(t_s_e_m *dble, t_conv_id *s_ptr)$/;"	f
 get_address_value	libft/srcs/address_tools.c	/^void	get_address_value(unsigned long *val_ptr, va_list *arg_ptr)$/;"	f
-get_board	main.c	/^int			get_board(t_filler)$/;"	f
+get_board	parsing.c	/^int			get_board(t_filler *info)$/;"	f
 get_double_value	libft/srcs/double_tools.c	/^void	get_double_value(va_list *arg_ptr, t_s_e_m *dble_ptr)$/;"	f
 get_func	libft/srcs/func_selector.c	/^t_conv_func		get_func(char c)$/;"	f
-get_infos	main.c	/^void		get_infos(int fd, t_filler *info)$/;"	f
+get_infos	parsing.c	/^void		get_infos(int fd, t_filler *info)$/;"	f
 get_int_value	libft/srcs/int_tools.c	/^void	get_int_value(long long int *val_ptr, va_list *arg_ptr,$/;"	f
 get_ldouble_value	libft/srcs/ldouble_tools.c	/^void	get_ldouble_value(va_list *arg_ptr, t_s_e_m *dble_ptr)$/;"	f
-get_line_col	main.c	/^void		get_line_col(t_filler *info, char *str)$/;"	f
+get_line_col	parsing.c	/^void		get_line_col(t_filler *info, char *str)$/;"	f
 get_next_line	libft/srcs/get_next_line.c	/^int				get_next_line(const int fd, char **line)$/;"	f
+get_piece	parsing.c	/^int			get_piece(t_filler *info)$/;"	f
+get_piece_line_col	parsing.c	/^void		get_piece_line_col(t_filler *info, char *str)$/;"	f
 get_unsigned_value	libft/srcs/unsigned_tools.c	/^void	get_unsigned_value(unsigned long long *val_ptr, va_list *arg_ptr,$/;"	f
 init	libft/srcs/get_next_line.c	/^t_data			*init(int fd, t_list **lst)$/;"	f
 int_len	libft/srcs/int_tools.c	/^int		int_len(long long int val)$/;"	f

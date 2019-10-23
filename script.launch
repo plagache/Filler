@@ -1,10 +1,8 @@
 #!/bin/bash
 
-make -C libft
-gcc -Wall -Werror -Wextra main.c libft/libft.a -o plagache.filler
 rm -f output.txt
 mv plagache.filler resources/players/
-./resources/filler_vm -f resources/maps/map00 -p1 resources/players/plagache.filler -p2 resources/players/hcao.filler > game_res
+./resources/filler_vm -f resources/maps/map00 -p2 resources/players/plagache.filler -p1 resources/players/hcao.filler > game_res
 #
 #read -e -p "player1 should be ?
 #" PLYR1

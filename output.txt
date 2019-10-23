@@ -1,3 +1,1 @@
-1line :|15|
-column :|17|
-Parsing OK
+|X 12||Y 14||Xop 8||Yop 2|
