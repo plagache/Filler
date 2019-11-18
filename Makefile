@@ -3,6 +3,7 @@ NAME= plagache.filler
 SRCS= main.c\
 	  parsing.c\
 	  tools.c\
+	  check_pos.c\
 
 
 OBJ= $(SRCS:.c=.o)

@@ -19,7 +19,9 @@ typedef struct		s_filler
 	int		piece_line;
 	int		piece_column;
 	char	*piece_id;
+	//+32 pour les minus.
 	char	*piece_id_op;
+	//same
 }					t_filler;
 
 
