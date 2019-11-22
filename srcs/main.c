@@ -1,4 +1,4 @@
-#include "libft/includes/ft_printf.h"
+#include "../libft/includes/ft_printf.h"
 //my printf lib
 #include <unistd.h>
 //write read
@@ -8,9 +8,9 @@
 //perror
 #include <string.h>
 //strerror
-#include "filler.h"
-#include "libft/includes/libft.h"
-#include "libft/includes/get_next_line.h"
+#include "../includes/filler.h"
+#include "../libft/includes/libft.h"
+#include "../libft/includes/get_next_line.h"
 #include <fcntl.h>
 
 /*
@@ -20,6 +20,31 @@
 ** - then write coor
 */
 
+int		choice_attack_side(t_filler *info)
+{
+	int ret;
+
+	ret = 0;
+	if ((info->init_op_X - info->init_X) > 0 || (info->init_op_Y - info->init_Y) > 0)
+		ret--;
+	if ((info->init_op_X - info->init_X) < 0 || (info->init_op_Y - info->init_Y) < 0)
+		ret++;
+	return (ret);
+}
+
+int		print_board(char **board, int line, int fd)
+{
+	int count;
+
+	count = 0;
+	while (count <= line && board[count] != '\0')
+	{
+		dprintf(fd, "%s\n", board[count]);
+		count++;
+	}
+	return (SUCCESS);
+}
+
 int			main(void)
 {
 	int			fd_debug;
@@ -28,10 +53,13 @@ int			main(void)
 	fd_debug = open("output.txt", O_CREAT|O_RDWR|O_APPEND);
 	get_infos(fd_debug, &info);
 	get_init_pos(&info);
-	dprintf(fd_debug, "|X %i||Y %i||Xop %i||Yop %i|", info.init_X, info.init_Y, info.init_op_X, info.init_op_Y);
+	print_board(info.board, info.line, fd_debug);
+	print_board(info.piece, info.line, fd_debug);
+	dprintf(fd_debug, "piece line :%i || piece column :%i\n", info.piece_line, info.piece_column);
+	dprintf(fd_debug, "\nNombre de ligne :%i\nNombre de column :%i\n|X %i||Y %i||Xop %i||Yop %i|", info.line, info.column, info.init_X, info.init_Y, info.init_op_X, info.init_op_Y);
+	dprintf(fd_debug, "choice attack %i", choice_attack_side(&info));
 	close(fd_debug);
-	ft_printf("8 2\n");
-	return (0);
+	return (EXIT_SUCCESS);
 }
 
 /*

@@ -6,6 +6,12 @@
 #include <stdio.h>
 #include <string.h>
 
+# define FALSE 0
+# define TRUE 1
+
+# define SUCCESS 0
+# define FAILURE 1
+
 typedef struct		s_filler
 {
 	char	**board;
@@ -18,6 +24,7 @@ typedef struct		s_filler
 	char 	**piece;
 	int		piece_line;
 	int		piece_column;
+	int		player_number;
 	char	*piece_id;
 	//+32 pour les minus.
 	char	*piece_id_op;

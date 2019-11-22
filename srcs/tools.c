@@ -1,4 +1,4 @@
-#include "libft/includes/ft_printf.h"
+#include "../libft/includes/ft_printf.h"
 //my printf lib
 #include <unistd.h>
 //write read
@@ -8,9 +8,9 @@
 //perror
 #include <string.h>
 //strerror
-#include "filler.h"
-#include "libft/includes/libft.h"
-#include "libft/includes/get_next_line.h"
+#include "../includes/filler.h"
+#include "../libft/includes/libft.h"
+#include "../libft/includes/get_next_line.h"
 #include <fcntl.h>
 
 void		get_init_pos(t_filler *info)
