@@ -55,7 +55,9 @@ int			main(void)
 	get_init_pos(&info);
 	print_board(info.board, info.line, fd_debug);
 	print_board(info.piece, info.line, fd_debug);
-	dprintf(fd_debug, "piece line :%i || piece column :%i\n", info.piece_line, info.piece_column);
+	get_last_pos_adver(&info, choice_attack_side(&info));
+	dprintf(fd_debug, "piece line :%i || piece column :%i\ntaille de la piece %i\n", info.piece_line, info.piece_column, get_piece_size(&info));
+	dprintf(fd_debug, "Nombre moi :%i \nnombre adversaire : %i\n", get_nbr_board(&info, info.player_number), get_nbr_board(&info, info.adver_number));
 	dprintf(fd_debug, "\nNombre de ligne :%i\nNombre de column :%i\n|X %i||Y %i||Xop %i||Yop %i|", info.line, info.column, info.init_X, info.init_Y, info.init_op_X, info.init_op_Y);
 	dprintf(fd_debug, "choice attack %i", choice_attack_side(&info));
 	close(fd_debug);

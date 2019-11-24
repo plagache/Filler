@@ -1,7 +1,7 @@
 NAME= plagache.filler
 
 SRC=	main.c\
-		parsing.c\
+		get_infos.c\
 		tools.c\
 		check_pos.c\
 		check_place.c\

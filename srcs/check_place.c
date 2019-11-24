@@ -12,3 +12,14 @@
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line.h"
 #include <fcntl.h>
+
+/*
+int			verification_apres_pos(int debut, int adver, int piece)
+{
+
+}
+void		tentative_de_posage(t_filler *info)
+{
+
+}
+*/
