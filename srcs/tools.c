@@ -42,11 +42,6 @@ void		get_init_pos(t_filler *info)
 	}
 }
 
-void		get_last_pos_adver(t_filler *info, int attck)
-{
-
-}
-
 int			get_piece_size(t_filler *info)
 {
 	int x;

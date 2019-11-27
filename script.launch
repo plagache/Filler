@@ -1,6 +1,6 @@
 #!/bin/bash
 
-make
+make re
 rm -f output.txt
 mv plagache.filler resources/players/
 ./resources/filler_vm -f resources/maps/map00 -p2 resources/players/plagache.filler -p1 resources/players/carli.filler > game_res

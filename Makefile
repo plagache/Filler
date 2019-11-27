@@ -5,6 +5,7 @@ SRC=	main.c\
 		tools.c\
 		check_pos.c\
 		check_place.c\
+		read.c\
 
 SRCS = $(addprefix srcs/,$(SRC))
 
@@ -47,5 +48,5 @@ fclean:
 
 re: fclean all
 
-.PHONY: all clean fcleanre
+.PHONY: all clean fclean re
 .SILENT: all clean fclean re

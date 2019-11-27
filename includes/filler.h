@@ -9,11 +9,14 @@
 # define FALSE 0
 # define TRUE 1
 
+# define READ_SIZE 10000
+
 # define SUCCESS 0
 # define FAILURE 1
 
 typedef struct		s_filler
 {
+	char	*prog;
 	char	**board;
 	int		line;
 	int		column;
@@ -32,7 +35,6 @@ typedef struct		s_filler
 	//same
 }					t_filler;
 
-
 void				get_line_col(t_filler *info);
 void				get_piece_line_col(t_filler *info);
 int					get_board(t_filler *info);
@@ -41,4 +43,5 @@ void				get_infos(int fd, t_filler *info);
 void				get_init_pos(t_filler *info);
 int					get_piece_size(t_filler *info);
 int					get_nbr_board(t_filler *info, int player_number);
+int					read_function(int fd, t_filler *info);
 #endif
