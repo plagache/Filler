@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 14:31:49 by plagache          #+#    #+#             */
-/*   Updated: 2019/11/27 18:24:11 by plagache         ###   ########.fr       */
+/*   Updated: 2019/11/28 17:50:03 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,44 +25,28 @@
 #include "../libft/includes/get_next_line.h"
 #include <fcntl.h>
 
-int		ft_strlen_char(char *s, char c)
+char		*next_line(char *line)
 {
-	int count;
+	char	*next_line;
 
-	count = 0;
-	while (s[count])
-	{
-		if (s[count] == c)
-			return (count);
-		count++;
-	}
-	return (FAILURE);
+	next_line = (ft_strchr(line, '\n') + 1);
+	return (next_line);
 }
 
 int		read_function(int fd_debug, t_filler *info)
 {
 	char	buff[BUFF_SIZE + 1];
-	int		count;
 	int		ret;
 
-	count = 0;
-	while ((ret = read(0, buff, BUFF_SIZE + 1)) > 0)
+	(void)fd_debug;
+	while ((ret = read(0, buff, BUFF_SIZE)) > 0)
 	{
 		buff[ret] = '\0';
 		if (info->prog == NULL)
 			info->prog = ft_strdup(buff);
 		else
 			info->prog = ft_strjoinfree(1, info->prog, buff);
-		return(FAILURE);
 	}
-	dprintf(fd_debug, "prog||%s||", info->prog);
-	/*
-	   while (buff[count] != '\n' && buff[count])
-	   {
-	   tmp[count] = buff[count];
-	   count++;
-	   }
-	   */
-	ft_printf("13 15");
-	return (SUCCESS);
+//	dprintf(fd_debug, "prog||%s||", info->prog);
+	return (ret);
 }

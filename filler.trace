@@ -1,5 +1,6 @@
-seed = 4661
-X: error on input
+seed = 4927
+O: timedout
+resources/players/plagache.filler: Segfault at 0
 resources/players/carli.filler won
 Score:
-162AGAINST0
+0AGAINST163
