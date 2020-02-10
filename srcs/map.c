@@ -24,19 +24,57 @@
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line.h"
 
-int		read_function(int fd_debug, t_filler *info)
+int			fill_map(t_filler *info)
 {
-	char	buff[BUFF_SIZE + 1];
-	int		ret;
 
-	(void)fd_debug;
-	while ((ret = read(0, buff, BUFF_SIZE)) > 0)
+}
+
+int			malloc_map(t_filler *info)
+{
+	int c;
+
+	c = info->m_line;
+	info->heat_map = (short**)malloc(sizeof(short*) * (c + 1));
+	if (info->heat_map == NULL)
+		return(FAILURE);
+	info->heat_map[c] = NULL;
+	while (c >= 0)
 	{
-		buff[ret] = '\0';
-		if (info->output_vm == NULL)
-			info->output_vm = ft_strdup(buff);
-		else
-			info->output_vm = ft_strjoinfree(1, info->output_vm, buff);
+		info->heat_map[c] = (short*)malloc(sizeof(short) * (info->m_column + 1));
+		if (info->heat_map[c] == NULL)
+			return (FAILURE);
+		info->heat_map[c][info->m_column] = '\0';
+		c--;
 	}
-	return (ret);
+	return (SUCCESS);
+}
+
+int			malloc_piece(t_filler *info)
+{
+	int c;
+
+	c = info->p_line;
+	info->heat_piece = (short**)malloc(sizeof(short*) * (c + 1));
+	if (info->heat_piece == NULL)
+		return(FAILURE);
+	info->heat_piece[c] = NULL;
+	while (c >= 0)
+	{
+		info->heat_piece[c] = (short*)malloc(sizeof(short) * (info->p_column + 1));
+		if (info->heat_piece[c] == NULL)
+			return (FAILURE);
+		info->heat_piece[c][info->p_column] = '\0';
+		c--;
+	}
+	return (SUCCESS);
+}
+
+int			create_map(t_filler *info)
+{
+	if (malloc_map(info) == FAILURE 
+			|| malloc_piece(info) == FAILURE
+			|| fill_map(info) == FAILURE
+			|| fill_piece(info) == FAILURE)
+		return (FAILURE);
+	return (SUCCESS);
 }

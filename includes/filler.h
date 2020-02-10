@@ -10,39 +10,24 @@
 # define TRUE 1
 
 # define SUCCESS 0
-# define FAILURE -1
+# define FAILURE 1
 
 typedef struct		s_filler
 {
-	char	*prog;
-	char	*prog_board;
-	char	*prog_piece;
-	char	**board;
-	int		line;
-	int		column;
-	int		init_X;
-	int		init_Y;
-	int		init_op_X;
-	int		init_op_Y;
+	char	**info_vm;
 	char 	**piece;
-	int		piece_line;
-	int		piece_column;
-	int		player_number;
-	int		adver_number;
-	char	piece_id;
-	//+32 pour les minus.
-	char	piece_id_op;
-	//same
+	char	**map;
+	short	**heat_map;
+	short	**heat_piece;
+	char	*output_vm;
+	char	pl_char[2];
+	char	ad_char[2];
+	int		p_line;
+	int		p_column;
+	int		m_line;
+	int		m_column;
 }					t_filler;
 
-void				get_line_col(t_filler *info);
-void				get_piece_line_col(t_filler *info);
-int					get_board(t_filler *info);
-int					get_piece(t_filler *info);
-void				get_infos(int fd, t_filler *info);
-void				get_init_pos(t_filler *info);
-int					get_piece_size(t_filler *info);
-int					get_nbr_board(t_filler *info, int player_number);
 int					read_function(int fd, t_filler *info);
-char				*next_line(char *line);
+int					get_info(t_filler *info, int fd_debug, int turn);
 #endif

@@ -1,10 +1,7 @@
 NAME= plagache.filler
 
 SRC=	main.c\
-		get_infos.c\
-		tools.c\
-		check_pos.c\
-		check_place.c\
+		get_info.c\
 		read.c\
 
 SRCS = $(addprefix srcs/,$(SRC))
@@ -17,7 +14,7 @@ OBJDIR= out
 
 LIBA= $(LIBDIR)/libft.a
 
-CFLAGS= -Wall -Werror -Wextra
+CFLAGS= -g -Wall -Werror -Wextra
 
 HEADER = includes/filler.h
 

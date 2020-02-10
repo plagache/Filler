@@ -3,8 +3,12 @@
 make
 rm -f output.txt
 mv plagache.filler resources/players/
-./resources/filler_vm -f resources/maps/map00 -p1 resources/players/plagache.filler -p2 resources/players/carli.filler > game_res
-#
+./resources/players/plagache.filler < 1map > output.txt
+cat output.txt
+
+#./resources/filler_vm -f resources/maps/map00 -p1 resources/players/plagache.filler -p2 resources/players/carli.filler > game_res
+
+
 #read -e -p "player1 should be ?
 #" PLYR1
 #read -e -p "player2 should be ?

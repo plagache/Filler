@@ -3,11 +3,26 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARG_H	libft/includes/arg.h	14;"	d
+BUFF_SIZE	libft/includes/get_next_line.h	15;"	d
+FAILURE	includes/filler.h	13;"	d
+FALSE	includes/filler.h	9;"	d
+FALSE	libft/includes/libft.h	19;"	d
+FILLER_H	includes/filler.h	2;"	d
+FLAGSMAX	libft/includes/arg.h	16;"	d
+FT_PRINTF_H	libft/includes/ft_printf.h	14;"	d
+GET_NEXT_LINE_H	libft/includes/get_next_line.h	14;"	d
+LIBFT_H	libft/includes/libft.h	14;"	d
+SUCCESS	includes/filler.h	12;"	d
+TRUE	includes/filler.h	10;"	d
+TRUE	libft/includes/libft.h	20;"	d
 add_strings	libft/srcs/float_tools.c	/^void	add_strings(char *dst, char *src, int len)$/;"	f
+adver_number	includes/filler.h	/^	int		adver_number;$/;"	m	struct:s_filler
 apply_d_rounding	libft/srcs/float_tools.c	/^void	apply_d_rounding(t_d_arrs *a_ptr, int prec)$/;"	f
 apply_ld_rounding	libft/srcs/float_tools.c	/^void	apply_ld_rounding(t_ld_arrs *a_ptr, int prec)$/;"	f
 blank	libft/srcs/ft_strtrim.c	/^static int		blank(char const *s)$/;"	f	file:
+board	includes/filler.h	/^	char	**board;$/;"	m	struct:s_filler
 calc_len_address	libft/srcs/address_tools.c	/^int		calc_len_address(t_conv_id *s_ptr, unsigned long value)$/;"	f
 calc_len_double	libft/srcs/double.c	/^int		calc_len_double(t_d_arrs *a_ptr, t_conv_id *s_ptr, t_s_e_m *dble_ptr)$/;"	f
 calc_len_hexa	libft/srcs/hexa_tools.c	/^int	calc_len_hexa(t_conv_id *s_ptr, unsigned long long value)$/;"	f
@@ -17,22 +32,34 @@ calc_len_octal	libft/srcs/octal_tools.c	/^int	calc_len_octal(t_conv_id *s_ptr, u
 calc_len_percent	libft/srcs/percent.c	/^int		calc_len_percent(t_conv_id *s_ptr)$/;"	f
 calc_len_string	libft/srcs/string.c	/^int			calc_len_string(t_conv_id *s_ptr, char *str)$/;"	f
 calc_len_unsigned	libft/srcs/unsigned_tools.c	/^int		calc_len_unsigned(t_conv_id *s_ptr, unsigned long long value)$/;"	f
+challenger	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
+check_col	srcs/check_pos.c	/^int		check_col(t_filler *info, char c)$/;"	f
 check_conversion	libft/srcs/ft_printf.c	/^int			check_conversion(const char *str)$/;"	f
 check_int_struct	libft/srcs/int_tools.c	/^int		check_int_struct(t_conv_id *ptr)$/;"	f
 check_octal_struct	libft/srcs/octal_tools.c	/^int	check_octal_struct(t_conv_id *s_ptr)$/;"	f
 check_special_value	libft/srcs/special.c	/^int		check_special_value(t_s_e_m *dble_ptr)$/;"	f
 check_unsigned_struct	libft/srcs/unsigned_tools.c	/^int		check_unsigned_struct(t_conv_id *ptr)$/;"	f
+choice_attack_side	srcs/main.c	/^int		choice_attack_side(t_filler *info)$/;"	f
+column	includes/filler.h	/^	int		column;$/;"	m	struct:s_filler
+content	libft/includes/get_next_line.h	/^	char			*content;$/;"	m	struct:s_data
+content	libft/includes/libft.h	/^	void			*content;$/;"	m	struct:s_dlist
+content	libft/includes/libft.h	/^	void			*content;$/;"	m	struct:s_list
+content_size	libft/includes/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list
+conv	libft/includes/arg.h	/^	char	conv;$/;"	m	struct:s_conv_info
 conv_path	libft/srcs/ft_printf.c	/^t_point		conv_path(const char *fmt, va_list *arg_ptr)$/;"	f
 countwords	libft/srcs/ft_strsplit.c	/^static size_t		countwords(const char *s, char c)$/;"	f	file:
 divide_str_by_two	libft/srcs/float_tools.c	/^void	divide_str_by_two(char *str, int len)$/;"	f
 double_exponant	libft/srcs/double_tools.c	/^void	double_exponant(t_s_e_m *dble_ptr, t_d_arrs *a_ptr)$/;"	f
 double_mantissa	libft/srcs/double_tools.c	/^void	double_mantissa(t_s_e_m *dble_ptr, t_d_arrs *a_ptr)$/;"	f
 double_rounding	libft/srcs/double_tools.c	/^void	double_rounding(t_d_arrs *a_ptr, t_conv_id *s_ptr)$/;"	f
+e	libft/includes/arg.h	/^	unsigned short		e;$/;"	m	struct:s_double
+fd	libft/includes/get_next_line.h	/^	int				fd;$/;"	m	struct:s_data
 fill_arr	libft/srcs/func_selector.c	/^void			fill_arr(t_conv_func *arr)$/;"	f
 fill_d_tabs	libft/srcs/double_tools.c	/^void	fill_d_tabs(t_d_arrs *a_ptr, t_s_e_m *dble_ptr, t_conv_id *s_ptr)$/;"	f
 fill_ld_tabs	libft/srcs/ldouble_tools.c	/^void	fill_ld_tabs(t_ld_arrs *a_ptr, t_s_e_m *dble_ptr, t_conv_id *s_ptr)$/;"	f
 filline	libft/srcs/get_next_line.c	/^void			filline(t_data *current, char **line)$/;"	f
 flag	libft/srcs/pflags.c	/^int		flag(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
+flags	libft/includes/arg.h	/^	char	flags;$/;"	m	struct:s_conv_info
 flags_in_struct	libft/srcs/pflags.c	/^void	flags_in_struct(char c, t_conv_id *struct_ptr)$/;"	f
 free_struct	libft/srcs/get_next_line.c	/^void			free_struct(t_data *current, t_list **lst)$/;"	f
 ft_2lstaddend	libft/srcs/ft_2lstaddend.c	/^void	ft_2lstaddend(t_dlist **lst, t_dlist *link)$/;"	f
@@ -54,11 +81,11 @@ ft_conv_percent	libft/srcs/percent.c	/^int		ft_conv_percent(t_conv_id *s_ptr, va
 ft_conv_string	libft/srcs/string.c	/^int			ft_conv_string(t_conv_id *s_ptr, va_list *arg_ptr)$/;"	f
 ft_conv_unsigned	libft/srcs/unsigned.c	/^int		ft_conv_unsigned(t_conv_id *s_ptr, va_list *arg_ptr)$/;"	f
 ft_double_special	libft/srcs/special.c	/^int		ft_double_special(t_conv_id *s_ptr, t_s_e_m *dble)$/;"	f
-ft_isalnum	libft/srcs/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalnum	libft/srcs/ft_isalnum.c	/^int	ft_isalnum(int character)$/;"	f
 ft_isalpha	libft/srcs/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
 ft_isascii	libft/srcs/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
 ft_isdigit	libft/srcs/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
-ft_islower	libft/srcs/ft_islower.c	/^int	ft_islower(int c)$/;"	f
+ft_islower	libft/srcs/ft_islower.c	/^int	ft_islower(int character)$/;"	f
 ft_isprint	libft/srcs/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
 ft_isupper	libft/srcs/ft_isupper.c	/^int	ft_isupper(int c)$/;"	f
 ft_itoa	libft/srcs/ft_itoa.c	/^char			*ft_itoa(int n)$/;"	f
@@ -93,12 +120,12 @@ ft_strclr	libft/srcs/ft_strclr.c	/^void	ft_strclr(char *s)$/;"	f
 ft_strcmp	libft/srcs/ft_strcmp.c	/^int	ft_strcmp(const char *s1, const char *s2)$/;"	f
 ft_strcpy	libft/srcs/ft_strcpy.c	/^char	*ft_strcpy(char *dst, const char *src)$/;"	f
 ft_strdel	libft/srcs/ft_strdel.c	/^void	ft_strdel(char **as)$/;"	f
-ft_strdup	libft/srcs/ft_strdup.c	/^char	*ft_strdup(const char *s1)$/;"	f
+ft_strdup	libft/srcs/ft_strdup.c	/^char	*ft_strdup(char *s1)$/;"	f
 ft_strequ	libft/srcs/ft_strequ.c	/^int	ft_strequ(char const *s1, char const *s2)$/;"	f
 ft_striter	libft/srcs/ft_striter.c	/^void	ft_striter(char *s, void (*f)(char*))$/;"	f
 ft_striteri	libft/srcs/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char*))$/;"	f
 ft_strjoin	libft/srcs/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
-ft_strjoinfree	libft/srcs/ft_strjoinfree.c	/^char	*ft_strjoinfree(int c, char const s1, char const s2)$/;"	f
+ft_strjoinfree	libft/srcs/ft_strjoinfree.c	/^char	*ft_strjoinfree(int c, char *s1, char *s2)$/;"	f
 ft_strlcat	libft/srcs/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f
 ft_strlen	libft/srcs/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
 ft_strmap	libft/srcs/ft_strmap.c	/^char	*ft_strmap(char const *s, char (*f)(char))$/;"	f
@@ -119,28 +146,46 @@ ft_toupper	libft/srcs/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 ftoa_double	libft/srcs/double.c	/^int		ftoa_double(t_s_e_m *dble, t_conv_id *s_ptr)$/;"	f
 ftoa_ldouble	libft/srcs/ldouble.c	/^int		ftoa_ldouble(t_s_e_m *dble, t_conv_id *s_ptr)$/;"	f
 get_address_value	libft/srcs/address_tools.c	/^void	get_address_value(unsigned long *val_ptr, va_list *arg_ptr)$/;"	f
-get_board	parsing.c	/^int			get_board(t_filler *info)$/;"	f
+get_board	srcs/get_infos.c	/^int			get_board(t_filler *info)$/;"	f
 get_double_value	libft/srcs/double_tools.c	/^void	get_double_value(va_list *arg_ptr, t_s_e_m *dble_ptr)$/;"	f
 get_func	libft/srcs/func_selector.c	/^t_conv_func		get_func(char c)$/;"	f
-get_infos	parsing.c	/^void		get_infos(int fd, t_filler *info)$/;"	f
+get_infos	srcs/get_infos.c	/^void		get_infos(int fd, t_filler *info)$/;"	f
+get_init_pos	srcs/tools.c	/^void		get_init_pos(t_filler *info)$/;"	f
 get_int_value	libft/srcs/int_tools.c	/^void	get_int_value(long long int *val_ptr, va_list *arg_ptr,$/;"	f
 get_ldouble_value	libft/srcs/ldouble_tools.c	/^void	get_ldouble_value(va_list *arg_ptr, t_s_e_m *dble_ptr)$/;"	f
-get_line_col	parsing.c	/^void		get_line_col(t_filler *info, char *str)$/;"	f
+get_line_col	srcs/get_infos.c	/^void		get_line_col(t_filler *info)$/;"	f
+get_nbr_board	srcs/tools.c	/^int			get_nbr_board(t_filler *info, int player_number)$/;"	f
 get_next_line	libft/srcs/get_next_line.c	/^int				get_next_line(const int fd, char **line)$/;"	f
-get_piece	parsing.c	/^int			get_piece(t_filler *info)$/;"	f
-get_piece_line_col	parsing.c	/^void		get_piece_line_col(t_filler *info, char *str)$/;"	f
+get_piece	srcs/get_infos.c	/^int			get_piece(t_filler *info)$/;"	f
+get_piece_line_col	srcs/get_infos.c	/^void		get_piece_line_col(t_filler *info)$/;"	f
+get_piece_size	srcs/tools.c	/^int			get_piece_size(t_filler *info)$/;"	f
+get_player_number	srcs/get_infos.c	/^int			get_player_number(t_filler *info)$/;"	f
 get_unsigned_value	libft/srcs/unsigned_tools.c	/^void	get_unsigned_value(unsigned long long *val_ptr, va_list *arg_ptr,$/;"	f
 init	libft/srcs/get_next_line.c	/^t_data			*init(int fd, t_list **lst)$/;"	f
+init_X	includes/filler.h	/^	int		init_X;$/;"	m	struct:s_filler
+init_Y	includes/filler.h	/^	int		init_Y;$/;"	m	struct:s_filler
+init_op_X	includes/filler.h	/^	int		init_op_X;$/;"	m	struct:s_filler
+init_op_Y	includes/filler.h	/^	int		init_op_Y;$/;"	m	struct:s_filler
 int_len	libft/srcs/int_tools.c	/^int		int_len(long long int val)$/;"	f
+interactif	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
 ldouble_exponant	libft/srcs/ldouble_tools.c	/^void	ldouble_exponant(t_s_e_m *dble_ptr, t_ld_arrs *a_ptr)$/;"	f
 ldouble_mantissa	libft/srcs/ldouble_tools.c	/^void	ldouble_mantissa(unsigned long long mant, t_ld_arrs *a_ptr)$/;"	f
 ldouble_rounding	libft/srcs/ldouble_tools.c	/^void	ldouble_rounding(t_ld_arrs *a_ptr, t_conv_id *s_ptr)$/;"	f
+len_f	libft/includes/arg.h	/^	int		len_f;$/;"	m	struct:s_double_arrs
+len_f	libft/includes/arg.h	/^	int		len_f;$/;"	m	struct:s_long_double_arrs
+len_i	libft/includes/arg.h	/^	int		len_i;$/;"	m	struct:s_double_arrs
+len_i	libft/includes/arg.h	/^	int		len_i;$/;"	m	struct:s_long_double_arrs
+len_modif1	libft/includes/arg.h	/^	char	len_modif1;$/;"	m	struct:s_conv_info
+len_modif2	libft/includes/arg.h	/^	char	len_modif2;$/;"	m	struct:s_conv_info
 len_modifier	libft/srcs/plenmodifier.c	/^int	len_modifier(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
 len_modifier_in_struct	libft/srcs/plenmodifier.c	/^int	len_modifier_in_struct(char *ptr, int len, t_conv_id *struct_ptr)$/;"	f
 lenword	libft/srcs/ft_strsplit.c	/^static size_t		lenword(const char *s, char c)$/;"	f	file:
+line	includes/filler.h	/^	int		line;$/;"	m	struct:s_filler
+live	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, :live, :file_name$/;"	v
 longd_special_value	libft/srcs/special.c	/^int		longd_special_value(t_s_e_m *dble_ptr)$/;"	f
 loop_conv	libft/srcs/ft_printf.c	/^int			loop_conv(const char *fmt, va_list *arg_ptr, int written)$/;"	f
-main	main.c	/^int			main(void)$/;"	f
+m	libft/includes/arg.h	/^	unsigned long long	m;$/;"	m	struct:s_double
+main	srcs/main.c	/^int			main(void)$/;"	f
 minus_flag_address	libft/srcs/address.c	/^void	minus_flag_address(t_conv_id *s_ptr, int len, unsigned long nb)$/;"	f
 minus_flag_double	libft/srcs/double.c	/^void	minus_flag_double(t_d_arrs *a_ptr, t_conv_id *s_ptr, t_s_e_m *dble_ptr,$/;"	f
 minus_flag_hexa	libft/srcs/hexa.c	/^void	minus_flag_hexa(t_conv_id *s_ptr, int len, unsigned long long nb)$/;"	f
@@ -153,6 +198,9 @@ minus_octal	libft/srcs/octal.c	/^void	minus_octal(t_conv_id *s_ptr, int len, uns
 minus_special_value	libft/srcs/special_tools.c	/^void	minus_special_value(t_s_e_m *dble_ptr, t_conv_id *s_ptr)$/;"	f
 minus_string	libft/srcs/string.c	/^void		minus_string(t_conv_id *s_ptr, int len, char *str)$/;"	f
 multiply_str_by_two	libft/srcs/float_tools.c	/^void	multiply_str_by_two(char *str, int len)$/;"	f
+next	libft/includes/libft.h	/^	struct s_dlist	*next;$/;"	m	struct:s_dlist	typeref:struct:s_dlist::s_dlist
+next	libft/includes/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+next_line	srcs/read.c	/^char		*next_line(char *line)$/;"	f
 no_flag_address	libft/srcs/address.c	/^void	no_flag_address(t_conv_id *s_ptr, int len, unsigned long nb)$/;"	f
 no_flag_double	libft/srcs/double.c	/^void	no_flag_double(t_d_arrs *a_ptr, t_conv_id *s_ptr, t_s_e_m *dble_ptr,$/;"	f
 no_flag_hexa	libft/srcs/hexa.c	/^void	no_flag_hexa(t_conv_id *s_ptr, int len, unsigned long long nb)$/;"	f
@@ -166,15 +214,68 @@ no_flag_unsigned	libft/srcs/unsigned.c	/^void	no_flag_unsigned(t_conv_id *s_ptr,
 null_ptr	libft/srcs/address.c	/^int		null_ptr(t_conv_id *s_ptr, int len)$/;"	f
 null_ptr_zero	libft/srcs/address.c	/^int		null_ptr_zero(t_conv_id *s_ptr, int len)$/;"	f
 null_string	libft/srcs/string.c	/^int			null_string(t_conv_id *s_ptr)$/;"	f
+output	libft/includes/arg.h	/^	char	*output;$/;"	m	struct:s_conv_info
 parsing	libft/srcs/ft_printf.c	/^int			parsing(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
+piece	includes/filler.h	/^	char 	**piece;$/;"	m	struct:s_filler
+piece_char	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, :live, :file_name$/;"	v
+piece_column	includes/filler.h	/^	int		piece_column;$/;"	m	struct:s_filler
+piece_id	includes/filler.h	/^	char	piece_id;$/;"	m	struct:s_filler
+piece_id_op	includes/filler.h	/^	char	piece_id_op;$/;"	m	struct:s_filler
+piece_line	includes/filler.h	/^	int		piece_line;$/;"	m	struct:s_filler
+player	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
+player_number	includes/filler.h	/^	int		player_number;$/;"	m	struct:s_filler
+precision	libft/includes/arg.h	/^	int		precision;$/;"	m	struct:s_conv_info
 precision	libft/srcs/pprecision.c	/^int		precision(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
 precision_in_struct	libft/srcs/pprecision.c	/^void	precision_in_struct(char c, t_conv_id *struct_ptr)$/;"	f
+prev	libft/includes/libft.h	/^	struct s_dlist	*prev;$/;"	m	struct:s_dlist	typeref:struct:s_dlist::s_dlist
+print_board	srcs/main.c	/^int		print_board(char **board, int line, int fd)$/;"	f
+prog	includes/filler.h	/^	char	*prog;$/;"	m	struct:s_filler
+prog_board	includes/filler.h	/^	char	*prog_board;$/;"	m	struct:s_filler
+prog_piece	includes/filler.h	/^	char	*prog_piece;$/;"	m	struct:s_filler
+read	libft/includes/arg.h	/^	int	read;$/;"	m	struct:s_point
+read_function	srcs/read.c	/^int		read_function(int fd_debug, t_filler *info)$/;"	f
 readline	libft/srcs/get_next_line.c	/^int				readline(t_data *current)$/;"	f
+s	libft/includes/arg.h	/^	char				s;$/;"	m	struct:s_double
+s_conv_info	libft/includes/arg.h	/^typedef struct	s_conv_info$/;"	s
+s_data	libft/includes/get_next_line.h	/^typedef struct		s_data$/;"	s
+s_dlist	libft/includes/libft.h	/^typedef struct		s_dlist$/;"	s
+s_double	libft/includes/arg.h	/^typedef struct	s_double$/;"	s
+s_double_arrs	libft/includes/arg.h	/^typedef struct	s_double_arrs$/;"	s
+s_filler	includes/filler.h	/^typedef struct		s_filler$/;"	s
+s_list	libft/includes/libft.h	/^typedef struct		s_list$/;"	s
+s_long_double_arrs	libft/includes/arg.h	/^typedef struct	s_long_double_arrs$/;"	s
+s_point	libft/includes/arg.h	/^typedef struct	s_point$/;"	s
+score	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, :live, :file_name$/;"	v
+sid	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
 special_value	libft/srcs/special_tools.c	/^void	special_value(t_s_e_m *dble_ptr, t_conv_id *s_ptr, int len)$/;"	f
+stdin	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, :live, :file_name$/;"	v
+stdout	resources/filler_vm	/^			self.stdin, @stdout, @wait_thr = Open3.popen2(@file_name)$/;"	v
+str	libft/includes/arg.h	/^	char				*str;$/;"	m	struct:s_double
 str_fill_char	libft/srcs/global_tools.c	/^int	str_fill_char(char *str, char c, int len)$/;"	f
+t_conv_func	libft/includes/arg.h	/^typedef int		(*t_conv_func)(t_conv_id *struct_ptr, va_list *arg_ptr);$/;"	t
+t_conv_id	libft/includes/arg.h	/^}				t_conv_id;$/;"	t	typeref:struct:s_conv_info
+t_d_arrs	libft/includes/arg.h	/^}				t_d_arrs;$/;"	t	typeref:struct:s_double_arrs
+t_data	libft/includes/get_next_line.h	/^}					t_data;$/;"	t	typeref:struct:s_data
+t_dlist	libft/includes/libft.h	/^}					t_dlist;$/;"	t	typeref:struct:s_dlist
+t_filler	includes/filler.h	/^}					t_filler;$/;"	t	typeref:struct:s_filler
+t_ld_arrs	libft/includes/arg.h	/^}				t_ld_arrs;$/;"	t	typeref:struct:s_long_double_arrs
+t_list	libft/includes/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+t_point	libft/includes/arg.h	/^}				t_point;$/;"	t	typeref:struct:s_point
+t_s_e_m	libft/includes/arg.h	/^}				t_s_e_m;$/;"	t	typeref:struct:s_double
+tab	libft/includes/arg.h	/^	char	tab[1500];$/;"	m	struct:s_double_arrs
+tab	libft/includes/arg.h	/^	char	tab[21500];$/;"	m	struct:s_long_double_arrs
+time	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
+tmp	libft/includes/arg.h	/^	char	tmp[1500];$/;"	m	struct:s_double_arrs
+tmp	libft/includes/arg.h	/^	char	tmp[21500];$/;"	m	struct:s_long_double_arrs
+total	libft/includes/arg.h	/^	char	*total;$/;"	m	struct:s_double_arrs
+total	libft/includes/arg.h	/^	char	*total;$/;"	m	struct:s_long_double_arrs
 unsigned_len_base	libft/srcs/global_tools.c	/^int	unsigned_len_base(unsigned long long val, unsigned base)$/;"	f
+verbose	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
+wait_thr	resources/filler_vm	/^			self.stdin, @stdout, @wait_thr = Open3.popen2(@file_name)$/;"	v
+width	libft/includes/arg.h	/^	int		width;$/;"	m	struct:s_conv_info
 width	libft/srcs/pwidth.c	/^int		width(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
 width_in_struct	libft/srcs/pwidth.c	/^void	width_in_struct(char c, t_conv_id *struct_ptr)$/;"	f
+written	libft/includes/arg.h	/^	int	written;$/;"	m	struct:s_point
 zero_flag_double	libft/srcs/double.c	/^void	zero_flag_double(t_d_arrs *a_ptr, t_conv_id *s_ptr, t_s_e_m *dble_ptr,$/;"	f
 zero_flag_hexa	libft/srcs/hexa.c	/^void	zero_flag_hexa(t_conv_id *s_ptr, int len, unsigned long long nb)$/;"	f
 zero_flag_hexa_upper	libft/srcs/hexa_upper.c	/^void	zero_flag_hexa_upper(t_conv_id *s_ptr, int len, unsigned long long nb)$/;"	f
