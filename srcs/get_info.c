@@ -79,7 +79,8 @@ int			get_board(t_filler *info)
 
 int			get_info(t_filler *info, int fd_debug, int turn)
 {
-	if (get_board(info) == FAILURE || find_map(info) == FAILURE || find_piece(info) == FAILURE)
+	if (get_board(info) == FAILURE || find_map(info) == FAILURE 
+		|| find_piece(info) == FAILURE)
 		return (FAILURE);
 	info->p_line = ft_atoi(info->piece[1]);
 	info->p_column = ft_atoi(info->piece[2]);

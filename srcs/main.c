@@ -65,6 +65,8 @@ int			main(void)
 	return (EXIT_SUCCESS);
 }
 
+//todo free array void**
+
 /*
  ** 1) Start
  ** Prog reads on standard input the player order like so:
