@@ -3,6 +3,8 @@ NAME= plagache.filler
 SRC=	main.c\
 		get_info.c\
 		read.c\
+		tools.c\
+		map.c\
 
 SRCS = $(addprefix srcs/,$(SRC))
 

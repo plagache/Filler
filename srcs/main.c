@@ -26,15 +26,21 @@ int		print_board(char **board, int fd)
 	return (SUCCESS);
 }
 
-int		print_map(short **board, int fd)
+int		print_map(short **board, int fd, t_filler *info)
 {
 	int count;
+	int x;
 
-	(void)fd;
 	count = 0;
-	while (board[count] != NULL)
+	while (count < info->m_line)
 	{
-		//	dprintf(fd, "%hi\n", board[count]);
+		x = 0;
+		while (x < info->m_column)
+		{
+			dprintf(fd, "%hi", board[count][x]);
+			x++;
+		}
+		dprintf(fd, "\n");
 		count++;
 	}
 	return (SUCCESS);
@@ -49,18 +55,25 @@ int			main(void)
 	turn = 0;
 	fd_debug = open("output.txt", O_CREAT|O_RDWR|O_APPEND);
 	ft_bzero(&info, sizeof(info));
+	info.fd_debug = fd_debug;
 	while (1)
 	{
 		read_function(fd_debug, &info);
 		get_info(&info, fd_debug, turn);
+		print_map(info.heat_map, fd_debug, &info);
+		//print_board(info.map, fd_debug);
+		//print_board(info.piece, fd_debug);
+		//print_board(info.info_vm, fd_debug);
 		turn++;
+		//print_map(info.heat_piece, fd_debug);
 		free(info.output_vm);
+		free_arr((void**)info.piece);
+		free_arr((void**)info.map);
+		free_arr((void**)info.info_vm);
+		//getchar();
 		return (EXIT_FAILURE);
 	}
 
-	//	print_map(info.heat_map, fd_debug);
-	//	print_board(info.plateau, fd_debug);
-	//	print_board(info.piece, fd_debug);
 	close(fd_debug);
 	return (EXIT_SUCCESS);
 }

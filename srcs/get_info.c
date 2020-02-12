@@ -35,10 +35,13 @@ void		find_player(t_filler *info)
 	}
 	else
 	{
-		info->ad_char[0] = 'O';
-		info->ad_char[1] = 'o';
 		info->pl_char[0] = 'X';
 		info->pl_char[1] = 'x';
+		dprintf(info->fd_debug, "\n|%s||%s|\n", info->pl_char, info->ad_char);
+		info->ad_char[0] = 'O';
+		dprintf(info->fd_debug, "\n|%s||%s|\n", info->pl_char, info->ad_char);
+		info->ad_char[1] = 'o';
+		dprintf(info->fd_debug, "\n|%s||%s|\n", info->pl_char, info->ad_char);
 	}
 }
 
@@ -70,7 +73,6 @@ int			find_map(t_filler *info)
 
 int			get_board(t_filler *info)
 {
-//	dprintf(fd_debug, "cekoncherchecqfd|%s|\n", info->info_vm[0]);
 	info->info_vm = ft_strsplit(info->output_vm, '\n');
 	if (info->info_vm == NULL)
 		return (FAILURE);
@@ -89,6 +91,8 @@ int			get_info(t_filler *info, int fd_debug, int turn)
 	dprintf(fd_debug, "\n|%i||%i||%i||%i|\n", info->p_line, info->p_column, info->m_line, info->m_column);
 	if (turn == 0)
 		find_player(info);
-	dprintf(fd_debug, "\n|%c||%c||%c||%c|\n", info->pl_char[0], info->pl_char[1], info->ad_char[0], info->ad_char[1]);
+//	dprintf(fd_debug, "\n|%s||%s|\n", info->pl_char, info->ad_char);
+	if (create_map(info) == FAILURE)
+		return (FAILURE);
 	return (SUCCESS);
 }

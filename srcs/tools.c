@@ -23,3 +23,18 @@
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line.h"
+
+void		free_arr(void **arr)
+{
+	int c;
+
+	c = 0;
+	while (arr[c] != NULL)
+	{
+		free(arr[c]);
+		c++;
+	}
+	free(arr);
+	//free each line recursivement 
+	//then free the board 
+}
