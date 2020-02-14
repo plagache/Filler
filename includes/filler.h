@@ -19,17 +19,19 @@
 typedef struct		s_filler
 {
 	char	**info_vm;
-	char 	**piece;
 	char	**map;
+	char 	**piece;
 	short	**heat_map;
 	short	**heat_piece;
 	char	*output_vm;
-	char	pl_char[2];
-	char	ad_char[2];
+	char	pl_char[3];
+	char	ad_char[3];
 	int		p_line;
 	int		p_column;
 	int		m_line;
 	int		m_column;
+	int		piece_line;
+	int		piece_column;
 	int		fd_debug;
 }					t_filler;
 

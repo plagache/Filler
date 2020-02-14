@@ -13,7 +13,7 @@
 #include "../libft/includes/get_next_line.h"
 #include <fcntl.h>
 
-int		print_board(char **board, int fd)
+int		print_info(char **board, int fd)
 {
 	int count;
 
@@ -37,7 +37,27 @@ int		print_map(short **board, int fd, t_filler *info)
 		x = 0;
 		while (x < info->m_column)
 		{
-			dprintf(fd, "%hi", board[count][x]);
+			dprintf(fd, "% hi", board[count][x]);
+			x++;
+		}
+		dprintf(fd, "\n");
+		count++;
+	}
+	return (SUCCESS);
+}
+
+int		print_piece(short **board, int fd, t_filler *info)
+{
+	int count;
+	int x;
+
+	count = 0;
+	while (count < info->piece_line)
+	{
+		x = 0;
+		while (x < info->piece_column)
+		{
+			dprintf(fd, "% hi", board[count][x]);
 			x++;
 		}
 		dprintf(fd, "\n");
@@ -61,9 +81,11 @@ int			main(void)
 		read_function(fd_debug, &info);
 		get_info(&info, fd_debug, turn);
 		print_map(info.heat_map, fd_debug, &info);
-		//print_board(info.map, fd_debug);
-		//print_board(info.piece, fd_debug);
-		//print_board(info.info_vm, fd_debug);
+		dprintf(fd_debug, "\n");
+		print_piece(info.heat_piece, fd_debug, &info);
+		//print_info(info.map, fd_debug);
+		//print_info(info.piece, fd_debug);
+		//print_info(info.info_vm, fd_debug);
 		turn++;
 		//print_map(info.heat_piece, fd_debug);
 		free(info.output_vm);

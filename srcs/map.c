@@ -35,22 +35,38 @@ int			fill_map(t_filler *info)
 		column = 0;
 		while (column < info->m_column)
 		{
-		//	dprintf(info->fd_debug, "\n|%s|\n", info->info_vm[line + 3]);
-		//	dprintf(info->fd_debug, "\nheatmap|%hi|\n", info->heat_map[line][column]);
 			if (ft_strchr(info->pl_char, info->info_vm[line + 3][column + 4]) != 0)
 				info->heat_map[line][column] = pl_value;
 			else if (ft_strchr(info->ad_char, info->info_vm[line + 3][column + 4]) != 0)
-			{
-				dprintf(info->fd_debug, "test\n");
 				info->heat_map[line][column] = ad_value;
-			}
 			else
 				info->heat_map[line][column] = base_value;
 			column++;
 		}
 		line++;
 	}
-	//fill map with basic info
+	return (SUCCESS);
+}
+
+int			fill_piece(t_filler *info)
+{
+	int line;
+	int column;
+
+	line = 0;
+	while (line < info->piece_line)
+	{
+		column = 0;
+		while (column < info->piece_column)
+		{
+			if (info->info_vm[line + 4 + info->m_line][column] == '*')
+				info->heat_piece[line][column] = -3;
+			else
+				info->heat_piece[line][column] = base_value;
+			column++;
+		}
+		line++;
+	}
 	return (SUCCESS);
 }
 
@@ -79,18 +95,19 @@ int			malloc_piece(t_filler *info)
 {
 	int c;
 
-	c = info->p_line;
+	c = info->piece_line;
 	info->heat_piece = (short**)malloc(sizeof(short*) * (c + 1));
 	if (info->heat_piece == NULL)
 		return(FAILURE);
 	info->heat_piece[c] = NULL;
-	while (c >= 0)
+	c = 0;
+	while (c < info->piece_line)
 	{
-		info->heat_piece[c] = (short*)malloc(sizeof(short) * (info->p_column + 1));
+		info->heat_piece[c] = (short*)malloc(sizeof(short) * (info->piece_column + 1));
 		if (info->heat_piece[c] == NULL)
 			return (FAILURE);
-		info->heat_piece[c][info->p_column] = '\0';
-		c--;
+		info->heat_piece[c][info->piece_column] = '\0';
+		c++;
 	}
 	return (SUCCESS);
 }
@@ -99,9 +116,8 @@ int			create_map(t_filler *info)
 {
 	if (malloc_map(info) == FAILURE 
 			|| malloc_piece(info) == FAILURE
-			|| fill_map(info) == FAILURE)
-
-		//	|| fill_piece(info) == FAILURE)
+			|| fill_map(info) == FAILURE
+			|| fill_piece(info) == FAILURE)
 		return (FAILURE);
 	return (SUCCESS);
 }

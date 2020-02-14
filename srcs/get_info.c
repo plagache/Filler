@@ -26,23 +26,12 @@
 
 void		find_player(t_filler *info)
 {
-	if (info->output_vm[10] == '1')
-	{
-		info->pl_char[0] = 'O';
-		info->pl_char[1] = 'o';
-		info->ad_char[0] = 'X';
-		info->ad_char[1] = 'x';
-	}
-	else
-	{
-		info->pl_char[0] = 'X';
-		info->pl_char[1] = 'x';
-		dprintf(info->fd_debug, "\n|%s||%s|\n", info->pl_char, info->ad_char);
-		info->ad_char[0] = 'O';
-		dprintf(info->fd_debug, "\n|%s||%s|\n", info->pl_char, info->ad_char);
-		info->ad_char[1] = 'o';
-		dprintf(info->fd_debug, "\n|%s||%s|\n", info->pl_char, info->ad_char);
-	}
+	info->pl_char[2] = '\0';
+	info->ad_char[2] = '\0';
+	info->pl_char[0] = info->output_vm[10] == '1' ?  'O' : 'X' ;
+	info->pl_char[1] = info->pl_char[0] == 'O' ?  'o' : 'x';
+	info->ad_char[0] = info->output_vm[10] == '1' ?  'X' : 'O';
+	info->ad_char[1] = info->ad_char[0] == 'X' ?  'x' : 'o';
 }
 
 int			find_piece(t_filler *info)
@@ -53,7 +42,7 @@ int			find_piece(t_filler *info)
 	while (ft_strncmp(info->info_vm[c], "Piece ", 6) != 0)
 		c++;
 	info->piece = ft_strsplit(info->info_vm[c], ' ');
-	if (info->piece == 0)
+	if (info->piece == NULL)
 		return (FAILURE);
 	return (SUCCESS);
 }
@@ -66,7 +55,7 @@ int			find_map(t_filler *info)
 	while (ft_strncmp(info->info_vm[c], "Plateau ", 8) != 0)
 		c++;
 	info->map = ft_strsplit(info->info_vm[c], ' ');
-	if (info->map == 0)
+	if (info->map == NULL)
 		return (FAILURE);
 	return (SUCCESS);
 }
@@ -88,10 +77,14 @@ int			get_info(t_filler *info, int fd_debug, int turn)
 	info->p_column = ft_atoi(info->piece[2]);
 	info->m_line = ft_atoi(info->map[1]);
 	info->m_column = ft_atoi(info->map[2]);
-	dprintf(fd_debug, "\n|%i||%i||%i||%i|\n", info->p_line, info->p_column, info->m_line, info->m_column);
+	info->piece_line = ft_atoi(info->piece[1]);
+	info->piece_column = ft_atoi(info->piece[2]);
+//	dprintf(fd_debug, "\n|%i||%i||%i||%i|\n", info->p_line, info->p_column, info->m_line, info->m_column);
 	if (turn == 0)
 		find_player(info);
-//	dprintf(fd_debug, "\n|%s||%s|\n", info->pl_char, info->ad_char);
+//	dprintf(fd_debug, "|%s||%s|\n", info->pl_char, info->ad_char);
+//	dprintf(fd_debug, "|%i||%i|\n", info->piece_line, info->piece_column);
+	(void)fd_debug;
 	if (create_map(info) == FAILURE)
 		return (FAILURE);
 	return (SUCCESS);

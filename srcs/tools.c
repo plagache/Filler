@@ -35,6 +35,4 @@ void		free_arr(void **arr)
 		c++;
 	}
 	free(arr);
-	//free each line recursivement 
-	//then free the board 
 }

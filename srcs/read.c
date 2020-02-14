@@ -38,6 +38,5 @@ int		read_function(int fd_debug, t_filler *info)
 		else
 			info->output_vm = ft_strjoinfree(1, info->output_vm, buff);
 	}
-	//dprintf(info->fd_debug, "|%s|\n", info->output_vm);
 	return (ret);
 }
