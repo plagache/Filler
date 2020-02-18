@@ -12,9 +12,10 @@
 # define SUCCESS 0
 # define FAILURE 1
 
+# define base_value 0
 # define pl_value -1
 # define ad_value -2
-# define base_value 0
+# define star_value -3
 
 typedef struct		s_filler
 {
@@ -40,4 +41,5 @@ int					get_info(t_filler *info, int fd_debug, int turn);
 void				free_arr(void **arr);
 int					create_map(t_filler *info);
 int					print_map(short **board, int fd, t_filler *info);
+int					call_mapping(t_filler *info);
 #endif

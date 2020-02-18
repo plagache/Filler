@@ -11,20 +11,28 @@
 /* ************************************************************************** */
 
 #include "../libft/includes/ft_printf.h"
-//my printf lib
 #include <unistd.h>
-//write read
 #include <stdlib.h>
-//malloc
 #include <stdio.h>
-//perror
 #include <string.h>
-//strerror
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line.h"
 
-int			fill_map(t_filler *info)
+/*
+** #include "../libft/includes/ft_printf.h" **
+** my printf lib **
+** #include <unistd.h> **
+** write read **
+** #include <stdlib.h> **
+** malloc **
+** #include <stdio.h> **
+** perror **
+** #include <string.h> **
+** strerror **
+*/
+
+int			fill_base_map(t_filler *info)
 {
 	int line;
 	int column;
@@ -35,9 +43,11 @@ int			fill_map(t_filler *info)
 		column = 0;
 		while (column < info->m_column)
 		{
-			if (ft_strchr(info->pl_char, info->info_vm[line + 3][column + 4]) != 0)
+			if (ft_strchr(info->pl_char,
+					info->info_vm[line + 3][column + 4]) != 0)
 				info->heat_map[line][column] = pl_value;
-			else if (ft_strchr(info->ad_char, info->info_vm[line + 3][column + 4]) != 0)
+			else if (ft_strchr(info->ad_char,
+					info->info_vm[line + 3][column + 4]) != 0)
 				info->heat_map[line][column] = ad_value;
 			else
 				info->heat_map[line][column] = base_value;
@@ -60,7 +70,7 @@ int			fill_piece(t_filler *info)
 		while (column < info->piece_column)
 		{
 			if (info->info_vm[line + 4 + info->m_line][column] == '*')
-				info->heat_piece[line][column] = -3;
+				info->heat_piece[line][column] = star_value;
 			else
 				info->heat_piece[line][column] = base_value;
 			column++;
@@ -77,15 +87,15 @@ int			malloc_map(t_filler *info)
 	c = info->m_line;
 	info->heat_map = (short**)malloc(sizeof(short*) * (c + 1));
 	if (info->heat_map == NULL)
-		return(FAILURE);
+		return (FAILURE);
 	info->heat_map[c] = NULL;
 	c = 0;
 	while (c < info->m_line)
 	{
-		info->heat_map[c] = (short*)malloc(sizeof(short) * (info->m_column + 1));
+		info->heat_map[c] = (short*)malloc(sizeof(short)
+			* (info->m_column));
 		if (info->heat_map[c] == NULL)
 			return (FAILURE);
-		info->heat_map[c][info->m_column] = '\0';
 		c++;
 	}
 	return (SUCCESS);
@@ -98,15 +108,15 @@ int			malloc_piece(t_filler *info)
 	c = info->piece_line;
 	info->heat_piece = (short**)malloc(sizeof(short*) * (c + 1));
 	if (info->heat_piece == NULL)
-		return(FAILURE);
+		return (FAILURE);
 	info->heat_piece[c] = NULL;
 	c = 0;
 	while (c < info->piece_line)
 	{
-		info->heat_piece[c] = (short*)malloc(sizeof(short) * (info->piece_column + 1));
+		info->heat_piece[c] = (short*)malloc(sizeof(short)
+				* (info->piece_column));
 		if (info->heat_piece[c] == NULL)
 			return (FAILURE);
-		info->heat_piece[c][info->piece_column] = '\0';
 		c++;
 	}
 	return (SUCCESS);
@@ -114,10 +124,11 @@ int			malloc_piece(t_filler *info)
 
 int			create_map(t_filler *info)
 {
-	if (malloc_map(info) == FAILURE 
+	if (malloc_map(info) == FAILURE
 			|| malloc_piece(info) == FAILURE
-			|| fill_map(info) == FAILURE
+			|| fill_base_map(info) == FAILURE
 			|| fill_piece(info) == FAILURE)
 		return (FAILURE);
+	call_mapping(info);
 	return (SUCCESS);
 }

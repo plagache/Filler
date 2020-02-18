@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read.c                                             :+:      :+:    :+:   */
+/*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/27 14:31:49 by plagache          #+#    #+#             */
-/*   Updated: 2019/11/28 17:50:03 by plagache         ###   ########.fr       */
+/*   Created: 2020/02/18 12:42:43 by plagache          #+#    #+#             */
+/*   Updated: 2020/02/18 12:42:48 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/includes/ft_printf.h"
-//my printf lib
 #include <unistd.h>
-//write read
 #include <stdlib.h>
-//malloc
 #include <stdio.h>
-//perror
 #include <string.h>
-//strerror
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line.h"
+
+/*
+** #include "../libft/includes/ft_printf.h" **
+** my printf lib **
+** #include <unistd.h> **
+** write read **
+** #include <stdlib.h> **
+** malloc **
+** #include <stdio.h> **
+** perror **
+** #include <string.h> **
+** strerror **
+*/
 
 void		free_arr(void **arr)
 {

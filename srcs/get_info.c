@@ -1,37 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read.c                                             :+:      :+:    :+:   */
+/*   get_info.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/27 14:31:49 by plagache          #+#    #+#             */
-/*   Updated: 2019/11/28 17:50:03 by plagache         ###   ########.fr       */
+/*   Created: 2020/02/18 12:43:08 by plagache          #+#    #+#             */
+/*   Updated: 2020/02/18 13:39:22 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/includes/ft_printf.h"
-//my printf lib
 #include <unistd.h>
-//write read
 #include <stdlib.h>
-//malloc
 #include <stdio.h>
-//perror
 #include <string.h>
-//strerror
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line.h"
+
+/*
+** #include "../libft/includes/ft_printf.h" **
+** my printf lib **
+** #include <unistd.h> **
+** write read **
+** #include <stdlib.h> **
+** malloc **
+** #include <stdio.h> **
+** perror **
+** #include <string.h> **
+** strerror **
+*/
 
 void		find_player(t_filler *info)
 {
 	info->pl_char[2] = '\0';
 	info->ad_char[2] = '\0';
-	info->pl_char[0] = info->output_vm[10] == '1' ?  'O' : 'X' ;
-	info->pl_char[1] = info->pl_char[0] == 'O' ?  'o' : 'x';
-	info->ad_char[0] = info->output_vm[10] == '1' ?  'X' : 'O';
-	info->ad_char[1] = info->ad_char[0] == 'X' ?  'x' : 'o';
+	info->pl_char[0] = info->output_vm[10] == '1' ? 'O' : 'X';
+	info->pl_char[1] = info->pl_char[0] == 'O' ? 'o' : 'x';
+	info->ad_char[0] = info->output_vm[10] == '1' ? 'X' : 'O';
+	info->ad_char[1] = info->ad_char[0] == 'X' ? 'x' : 'o';
 }
 
 int			find_piece(t_filler *info)
@@ -70,7 +78,7 @@ int			get_board(t_filler *info)
 
 int			get_info(t_filler *info, int fd_debug, int turn)
 {
-	if (get_board(info) == FAILURE || find_map(info) == FAILURE 
+	if (get_board(info) == FAILURE || find_map(info) == FAILURE
 		|| find_piece(info) == FAILURE)
 		return (FAILURE);
 	info->p_line = ft_atoi(info->piece[1]);

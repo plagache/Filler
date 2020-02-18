@@ -1,19 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/18 12:43:23 by plagache          #+#    #+#             */
+/*   Updated: 2020/02/18 12:43:27 by plagache         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft/includes/ft_printf.h"
-//my printf lib
 #include <unistd.h>
-//write read
 #include <stdlib.h>
-//malloc
 #include <stdio.h>
-//perror
 #include <string.h>
-//strerror
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line.h"
 #include <fcntl.h>
 
-int		print_info(char **board, int fd)
+/*
+** fcntl is for open
+*/
+
+/*
+** #include "../libft/includes/ft_printf.h" **
+** my printf lib **
+** #include <unistd.h> **
+** write read **
+** #include <stdlib.h> **
+** malloc **
+** #include <stdio.h> **
+** perror **
+** #include <string.h> **
+** strerror **
+*/
+
+int			print_info(char **board, int fd)
 {
 	int count;
 
@@ -26,7 +50,7 @@ int		print_info(char **board, int fd)
 	return (SUCCESS);
 }
 
-int		print_map(short **board, int fd, t_filler *info)
+int			print_map(short **board, int fd, t_filler *info)
 {
 	int count;
 	int x;
@@ -37,7 +61,7 @@ int		print_map(short **board, int fd, t_filler *info)
 		x = 0;
 		while (x < info->m_column)
 		{
-			dprintf(fd, "% hi", board[count][x]);
+			dprintf(fd, "%3hi", board[count][x]);
 			x++;
 		}
 		dprintf(fd, "\n");
@@ -46,7 +70,7 @@ int		print_map(short **board, int fd, t_filler *info)
 	return (SUCCESS);
 }
 
-int		print_piece(short **board, int fd, t_filler *info)
+int			print_piece(short **board, int fd, t_filler *info)
 {
 	int count;
 	int x;
@@ -57,7 +81,7 @@ int		print_piece(short **board, int fd, t_filler *info)
 		x = 0;
 		while (x < info->piece_column)
 		{
-			dprintf(fd, "% hi", board[count][x]);
+			dprintf(fd, "%3hi", board[count][x]);
 			x++;
 		}
 		dprintf(fd, "\n");
@@ -73,7 +97,7 @@ int			main(void)
 	t_filler	info;
 
 	turn = 0;
-	fd_debug = open("output.txt", O_CREAT|O_RDWR|O_APPEND);
+	fd_debug = open("output.txt", O_CREAT | O_RDWR | O_APPEND);
 	ft_bzero(&info, sizeof(info));
 	info.fd_debug = fd_debug;
 	while (1)
@@ -95,12 +119,9 @@ int			main(void)
 		//getchar();
 		return (EXIT_FAILURE);
 	}
-
 	close(fd_debug);
 	return (EXIT_SUCCESS);
 }
-
-//todo free array void**
 
 /*
  ** 1) Start
@@ -131,7 +152,7 @@ int			main(void)
  ** 012 .............................
  ** 013 .............................
  **
- ** 
+ **
  ** Prog reads the pieces like so:
  ** Piece Lne 4 Col 7:
  **  ...*...

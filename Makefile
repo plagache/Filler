@@ -5,6 +5,7 @@ SRC=	main.c\
 		read.c\
 		tools.c\
 		map.c\
+		heat_map.c\
 
 SRCS = $(addprefix srcs/,$(SRC))
 
