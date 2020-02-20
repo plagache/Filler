@@ -112,10 +112,10 @@ int			main(void)
 		//print_info(info.info_vm, fd_debug);
 		turn++;
 		//print_map(info.heat_piece, fd_debug);
-		free(info.output_vm);
-		free_arr((void**)info.piece);
-		free_arr((void**)info.map);
-		free_arr((void**)info.info_vm);
+	//	free(info.output_vm);
+	//	free_arr((void**)info.piece);
+	//	free_arr((void**)info.map);
+	//	free_arr((void**)info.info_vm);
 		//getchar();
 		return (EXIT_FAILURE);
 	}

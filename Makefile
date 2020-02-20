@@ -6,6 +6,7 @@ SRC=	main.c\
 		tools.c\
 		map.c\
 		heat_map.c\
+		score.c\
 
 SRCS = $(addprefix srcs/,$(SRC))
 

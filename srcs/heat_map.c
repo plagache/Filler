@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 12:46:02 by plagache          #+#    #+#             */
-/*   Updated: 2020/02/18 13:52:55 by plagache         ###   ########.fr       */
+/*   Updated: 2020/02/18 21:05:28 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,6 @@ int			call_mapping(t_filler *info)
 		value = to_fill;
 		to_fill++;
 	}
+//print_map(info->heat_map, info->fd_debug, info);
 	return (SUCCESS);
 }

@@ -130,5 +130,6 @@ int			create_map(t_filler *info)
 			|| fill_piece(info) == FAILURE)
 		return (FAILURE);
 	call_mapping(info);
+	//print_map(info->heat_map, info->fd_debug, info);
 	return (SUCCESS);
 }

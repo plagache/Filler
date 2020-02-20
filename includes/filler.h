@@ -27,12 +27,13 @@ typedef struct		s_filler
 	char	*output_vm;
 	char	pl_char[3];
 	char	ad_char[3];
+	int		pos[3];
 	int		p_line;
 	int		p_column;
 	int		m_line;
 	int		m_column;
-	int		piece_line;
-	int		piece_column;
+//	int		piece_line;
+//	int		piece_column;
 	int		fd_debug;
 }					t_filler;
 
@@ -42,4 +43,5 @@ void				free_arr(void **arr);
 int					create_map(t_filler *info);
 int					print_map(short **board, int fd, t_filler *info);
 int					call_mapping(t_filler *info);
+void				best_score(t_filler *info);
 #endif

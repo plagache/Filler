@@ -87,7 +87,7 @@ int			get_info(t_filler *info, int fd_debug, int turn)
 	info->m_column = ft_atoi(info->map[2]);
 	info->piece_line = ft_atoi(info->piece[1]);
 	info->piece_column = ft_atoi(info->piece[2]);
-//	dprintf(fd_debug, "\n|%i||%i||%i||%i|\n", info->p_line, info->p_column, info->m_line, info->m_column);
+	//dprintf(fd_debug, "\n|%i||%i||%i||%i|\n", info->p_line, info->p_column, info->m_line, info->m_column);
 	if (turn == 0)
 		find_player(info);
 //	dprintf(fd_debug, "|%s||%s|\n", info->pl_char, info->ad_char);
@@ -95,5 +95,6 @@ int			get_info(t_filler *info, int fd_debug, int turn)
 	(void)fd_debug;
 	if (create_map(info) == FAILURE)
 		return (FAILURE);
+	best_score(info);
 	return (SUCCESS);
 }

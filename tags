@@ -3,27 +3,28 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
-ARG_H	libft/includes/arg.h	/^# define ARG_H$/;"	d
-BUFF_SIZE	libft/includes/get_next_line.h	/^# define BUFF_SIZE /;"	d
-FAILURE	includes/filler.h	/^# define FAILURE /;"	d
-FALSE	includes/filler.h	/^# define FALSE /;"	d
-FALSE	libft/includes/libft.h	/^# define FALSE /;"	d
-FILLER_H	includes/filler.h	/^# define FILLER_H$/;"	d
-FLAGSMAX	libft/includes/arg.h	/^# define FLAGSMAX /;"	d
-FT_PRINTF_H	libft/includes/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
-GET_NEXT_LINE_H	libft/includes/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
-LIBFT_H	libft/includes/libft.h	/^# define LIBFT_H$/;"	d
-SUCCESS	includes/filler.h	/^# define SUCCESS /;"	d
-TRUE	includes/filler.h	/^# define TRUE /;"	d
-TRUE	libft/includes/libft.h	/^# define TRUE /;"	d
-__compact_unwind__LD	out/get_info.o	/^/;"	v
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARG_H	libft/includes/arg.h	14;"	d
+BUFF_SIZE	libft/includes/get_next_line.h	15;"	d
+D	resources/players/plagache.filler.dSYM/Contents/Resources/DWARF/plagache.filler	/^/;"	v
+FAILURE	includes/filler.h	13;"	d
+FALSE	includes/filler.h	9;"	d
+FALSE	libft/includes/libft.h	19;"	d
+FILLER_H	includes/filler.h	2;"	d
+FLAGSMAX	libft/includes/arg.h	16;"	d
+FT_PRINTF_H	libft/includes/ft_printf.h	14;"	d
+GET_NEXT_LINE_H	libft/includes/get_next_line.h	14;"	d
+LIBFT_H	libft/includes/libft.h	14;"	d
+SUCCESS	includes/filler.h	12;"	d
+TRUE	includes/filler.h	10;"	d
+TRUE	libft/includes/libft.h	20;"	d
 ad_char	includes/filler.h	/^	char	ad_char[3];$/;"	m	struct:s_filler
-ad_value	includes/filler.h	/^# define ad_value /;"	d
+ad_value	includes/filler.h	17;"	d
 add_strings	libft/srcs/float_tools.c	/^void	add_strings(char *dst, char *src, int len)$/;"	f
 apply_d_rounding	libft/srcs/float_tools.c	/^void	apply_d_rounding(t_d_arrs *a_ptr, int prec)$/;"	f
 apply_ld_rounding	libft/srcs/float_tools.c	/^void	apply_ld_rounding(t_ld_arrs *a_ptr, int prec)$/;"	f
-base_value	includes/filler.h	/^# define base_value /;"	d
+base_value	includes/filler.h	15;"	d
+best_score	srcs/score.c	/^void	best_score(t_filler *info)$/;"	f
 blank	libft/srcs/ft_strtrim.c	/^static int		blank(char const *s)$/;"	f	file:
 calc_len_address	libft/srcs/address_tools.c	/^int		calc_len_address(t_conv_id *s_ptr, unsigned long value)$/;"	f
 calc_len_double	libft/srcs/double.c	/^int		calc_len_double(t_d_arrs *a_ptr, t_conv_id *s_ptr, t_s_e_m *dble_ptr)$/;"	f
@@ -34,6 +35,7 @@ calc_len_octal	libft/srcs/octal_tools.c	/^int	calc_len_octal(t_conv_id *s_ptr, u
 calc_len_percent	libft/srcs/percent.c	/^int		calc_len_percent(t_conv_id *s_ptr)$/;"	f
 calc_len_string	libft/srcs/string.c	/^int			calc_len_string(t_conv_id *s_ptr, char *str)$/;"	f
 calc_len_unsigned	libft/srcs/unsigned_tools.c	/^int		calc_len_unsigned(t_conv_id *s_ptr, unsigned long long value)$/;"	f
+calcul_score	srcs/score.c	/^int		calcul_score(t_filler *info, int c_line, int c_column)$/;"	f
 call_mapping	srcs/heat_map.c	/^int			call_mapping(t_filler *info)$/;"	f
 challenger	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
 check_conversion	libft/srcs/ft_printf.c	/^int			check_conversion(const char *str)$/;"	f
@@ -69,7 +71,6 @@ find_player	srcs/get_info.c	/^void		find_player(t_filler *info)$/;"	f
 flag	libft/srcs/pflags.c	/^int		flag(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
 flags	libft/includes/arg.h	/^	char	flags;$/;"	m	struct:s_conv_info
 flags_in_struct	libft/srcs/pflags.c	/^void	flags_in_struct(char c, t_conv_id *struct_ptr)$/;"	f
-format	tags	/^!_TAG_FILE_FORMAT	2	\/extended format; --format=1 will not append ;" to lines\/$/;"	v
 free_arr	srcs/tools.c	/^void		free_arr(void **arr)$/;"	f
 free_struct	libft/srcs/get_next_line.c	/^void			free_struct(t_data *current, t_list **lst)$/;"	f
 ft_2lstaddend	libft/srcs/ft_2lstaddend.c	/^void	ft_2lstaddend(t_dlist **lst, t_dlist *link)$/;"	f
@@ -171,7 +172,8 @@ info_vm	includes/filler.h	/^	char	**info_vm;$/;"	m	struct:s_filler
 init	libft/srcs/get_next_line.c	/^t_data			*init(int fd, t_list **lst)$/;"	f
 int_len	libft/srcs/int_tools.c	/^int		int_len(long long int val)$/;"	f
 interactif	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
-is_zero	srcs/heat_map.c	/^int			is_zero(short **board)$/;"	f
+is_placeable	srcs/score.c	/^int		is_placeable(t_filler *info, int c_line, int c_column)$/;"	f
+is_zero	srcs/heat_map.c	/^int			is_zero(t_filler *info)$/;"	f
 ldouble_exponant	libft/srcs/ldouble_tools.c	/^void	ldouble_exponant(t_s_e_m *dble_ptr, t_ld_arrs *a_ptr)$/;"	f
 ldouble_mantissa	libft/srcs/ldouble_tools.c	/^void	ldouble_mantissa(unsigned long long mant, t_ld_arrs *a_ptr)$/;"	f
 ldouble_rounding	libft/srcs/ldouble_tools.c	/^void	ldouble_rounding(t_ld_arrs *a_ptr, t_conv_id *s_ptr)$/;"	f
@@ -231,8 +233,9 @@ piece_char	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :st
 piece_column	includes/filler.h	/^	int		piece_column;$/;"	m	struct:s_filler
 piece_line	includes/filler.h	/^	int		piece_line;$/;"	m	struct:s_filler
 pl_char	includes/filler.h	/^	char	pl_char[3];$/;"	m	struct:s_filler
-pl_value	includes/filler.h	/^# define pl_value /;"	d
+pl_value	includes/filler.h	16;"	d
 player	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
+pos	includes/filler.h	/^	int		pos[3];$/;"	m	struct:s_filler
 precision	libft/includes/arg.h	/^	int		precision;$/;"	m	struct:s_conv_info
 precision	libft/srcs/pprecision.c	/^int		precision(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
 precision_in_struct	libft/srcs/pprecision.c	/^void	precision_in_struct(char c, t_conv_id *struct_ptr)$/;"	f
@@ -254,10 +257,10 @@ s_list	libft/includes/libft.h	/^typedef struct		s_list$/;"	s
 s_long_double_arrs	libft/includes/arg.h	/^typedef struct	s_long_double_arrs$/;"	s
 s_point	libft/includes/arg.h	/^typedef struct	s_point$/;"	s
 score	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, :live, :file_name$/;"	v
-search_value	srcs/heat_map.c	/^void		search_value(t_filler *info, int value, int to_fill)$/;"	f
+search_value	srcs/heat_map.c	/^void			search_value(t_filler *info, int value, int to_fill)$/;"	f
 sid	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
 special_value	libft/srcs/special_tools.c	/^void	special_value(t_s_e_m *dble_ptr, t_conv_id *s_ptr, int len)$/;"	f
-star_value	includes/filler.h	/^# define star_value /;"	d
+star_value	includes/filler.h	18;"	d
 stdin	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, :live, :file_name$/;"	v
 stdout	resources/filler_vm	/^			self.stdin, @stdout, @wait_thr = Open3.popen2(@file_name)$/;"	v
 str	libft/includes/arg.h	/^	char				*str;$/;"	m	struct:s_double
