@@ -64,10 +64,10 @@ int			fill_piece(t_filler *info)
 	int column;
 
 	line = 0;
-	while (line < info->piece_line)
+	while (line < info->p_line)
 	{
 		column = 0;
-		while (column < info->piece_column)
+		while (column < info->p_column)
 		{
 			if (info->info_vm[line + 4 + info->m_line][column] == '*')
 				info->heat_piece[line][column] = star_value;
@@ -105,16 +105,16 @@ int			malloc_piece(t_filler *info)
 {
 	int c;
 
-	c = info->piece_line;
+	c = info->p_line;
 	info->heat_piece = (short**)malloc(sizeof(short*) * (c + 1));
 	if (info->heat_piece == NULL)
 		return (FAILURE);
 	info->heat_piece[c] = NULL;
 	c = 0;
-	while (c < info->piece_line)
+	while (c < info->p_line)
 	{
 		info->heat_piece[c] = (short*)malloc(sizeof(short)
-				* (info->piece_column));
+				* (info->p_column));
 		if (info->heat_piece[c] == NULL)
 			return (FAILURE);
 		c++;
@@ -130,6 +130,5 @@ int			create_map(t_filler *info)
 			|| fill_piece(info) == FAILURE)
 		return (FAILURE);
 	call_mapping(info);
-	//print_map(info->heat_map, info->fd_debug, info);
 	return (SUCCESS);
 }

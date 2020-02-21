@@ -78,7 +78,7 @@ void	best_score(t_filler *info)
 					info->pos[0] = line;
 					info->pos[1] = column;
 					info->pos[2] = calcul_score(info, line, column);
-					dprintf(info->fd_debug, "|%i||%i|%i|\n", info->pos[0], info->pos[1], info->pos[2]);
+//					dprintf(info->fd_debug, "|%i||%i|%i|\n", info->pos[0], info->pos[1], info->pos[2]);
 				}
 			}
 			column++;

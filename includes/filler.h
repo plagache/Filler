@@ -32,8 +32,6 @@ typedef struct		s_filler
 	int		p_column;
 	int		m_line;
 	int		m_column;
-//	int		piece_line;
-//	int		piece_column;
 	int		fd_debug;
 }					t_filler;
 

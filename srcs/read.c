@@ -32,19 +32,46 @@
 ** strerror **
 */
 
+int		end_of_read(t_filler *info)
+{
+	int backslach_n = 0;
+	char *ptr;
+	int c;
+
+	c = 0;
+	if ((ptr = ft_strstr(info->output_vm, "Piece ")) == NULL)
+		return (FAILURE);
+	if (ft_strchr(ptr, ' ') == NULL)
+		return (FAILURE);
+	backslach_n = ft_atoi((ptr + 6));
+	backslach_n++;
+	printf("BEGIN\n");
+	while (ptr[c])
+	{
+		if (ptr[c] == '\n')
+			backslach_n--;
+		c++;
+	}
+	if (backslach_n != 0)
+		return (FAILURE);
+	return (SUCCESS);
+}
+
 int		read_function(int fd_debug, t_filler *info)
 {
 	char	buff[BUFF_SIZE + 1];
-	int		ret;
+	int		ret = 0;
 
 	(void)fd_debug;
-	while ((ret = read(0, buff, BUFF_SIZE)) > 0)
+	if (info->output_vm == NULL)
+		info->output_vm = ft_strnew(0);
+	while (end_of_read(info) != SUCCESS)
 	{
+		ret = read(0, buff, BUFF_SIZE);
 		buff[ret] = '\0';
-		if (info->output_vm == NULL)
-			info->output_vm = ft_strdup(buff);
-		else
-			info->output_vm = ft_strjoinfree(1, info->output_vm, buff);
+		info->output_vm = ft_strjoinfree(1, info->output_vm, buff);
+	//	dprintf(fd_debug, "ret =|%i|\n|%s|\n", ret, info->output_vm);
+	//	dprintf(fd_debug, "BEGIN\n");
 	}
 	return (ret);
 }

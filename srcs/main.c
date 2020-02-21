@@ -37,19 +37,6 @@
 ** strerror **
 */
 
-int			print_info(char **board, int fd)
-{
-	int count;
-
-	count = 0;
-	while (board[count] != NULL)
-	{
-		dprintf(fd, "%s\n", board[count]);
-		count++;
-	}
-	return (SUCCESS);
-}
-
 int			print_map(short **board, int fd, t_filler *info)
 {
 	int count;
@@ -76,10 +63,10 @@ int			print_piece(short **board, int fd, t_filler *info)
 	int x;
 
 	count = 0;
-	while (count < info->piece_line)
+	while (count < info->p_line)
 	{
 		x = 0;
-		while (x < info->piece_column)
+		while (x < info->p_column)
 		{
 			dprintf(fd, "%3hi", board[count][x]);
 			x++;
@@ -97,25 +84,22 @@ int			main(void)
 	t_filler	info;
 
 	turn = 0;
-	fd_debug = open("output.txt", O_CREAT | O_RDWR | O_APPEND);
+	fd_debug = open("output.txt", O_RDWR | O_APPEND);
 	ft_bzero(&info, sizeof(info));
 	info.fd_debug = fd_debug;
 	while (1)
 	{
 		read_function(fd_debug, &info);
 		get_info(&info, fd_debug, turn);
-		print_map(info.heat_map, fd_debug, &info);
-		dprintf(fd_debug, "\n");
-		print_piece(info.heat_piece, fd_debug, &info);
-		//print_info(info.map, fd_debug);
-		//print_info(info.piece, fd_debug);
-		//print_info(info.info_vm, fd_debug);
+	//	print_map(info.heat_map, fd_debug, &info);
+	//	dprintf(fd_debug, "\n");
+	//	print_piece(info.heat_piece, fd_debug, &info);
+		ft_printf("%i %i\n", info.pos[0], info.pos[1]);
 		turn++;
-		//print_map(info.heat_piece, fd_debug);
-	//	free(info.output_vm);
-	//	free_arr((void**)info.piece);
-	//	free_arr((void**)info.map);
-	//	free_arr((void**)info.info_vm);
+		free(info.output_vm);
+		free_arr((void**)info.piece);
+		free_arr((void**)info.map);
+		free_arr((void**)info.info_vm);
 		//getchar();
 		return (EXIT_FAILURE);
 	}
