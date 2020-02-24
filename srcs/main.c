@@ -17,7 +17,6 @@
 #include <string.h>
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
-#include "../libft/includes/get_next_line.h"
 #include <fcntl.h>
 
 /*
@@ -90,18 +89,18 @@ int			main(void)
 	while (1)
 	{
 		read_function(fd_debug, &info);
-		get_info(&info, fd_debug, turn);
+		get_info(&info, turn);
 	//	print_map(info.heat_map, fd_debug, &info);
 	//	dprintf(fd_debug, "\n");
 	//	print_piece(info.heat_piece, fd_debug, &info);
 		ft_printf("%i %i\n", info.pos[0], info.pos[1]);
 		turn++;
-		free(info.output_vm);
+	//	free(info.output_vm);
 		free_arr((void**)info.piece);
 		free_arr((void**)info.map);
 		free_arr((void**)info.info_vm);
 		//getchar();
-		return (EXIT_FAILURE);
+	//	return (EXIT_FAILURE);
 	}
 	close(fd_debug);
 	return (EXIT_SUCCESS);

@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <string.h>
 
+# define BUFF_SIZE 200
+
 # define FALSE 0
 # define TRUE 1
 
@@ -36,10 +38,11 @@ typedef struct		s_filler
 }					t_filler;
 
 int					read_function(int fd, t_filler *info);
-int					get_info(t_filler *info, int fd_debug, int turn);
+int					get_info(t_filler *info, int turn);
 void				free_arr(void **arr);
 int					create_map(t_filler *info);
 int					print_map(short **board, int fd, t_filler *info);
+int					print_piece(short **board, int fd, t_filler *info);
 int					call_mapping(t_filler *info);
 void				best_score(t_filler *info);
 #endif

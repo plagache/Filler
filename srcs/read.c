@@ -17,7 +17,6 @@
 #include <string.h>
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
-#include "../libft/includes/get_next_line.h"
 
 /*
 ** #include "../libft/includes/ft_printf.h" **
@@ -34,27 +33,24 @@
 
 int		end_of_read(t_filler *info)
 {
-	int backslach_n = 0;
+	int backslash_n = 0;
 	char *ptr;
 	int c;
 
 	c = 0;
 	if ((ptr = ft_strstr(info->output_vm, "Piece ")) == NULL)
 		return (FAILURE);
-	if (ft_strchr(ptr, ' ') == NULL)
+	if (ft_strchr(ptr, '\n') == NULL)
 		return (FAILURE);
-	backslach_n = ft_atoi((ptr + 6));
-	backslach_n++;
-	printf("BEGIN\n");
+	backslash_n = ft_atoi(ptr + 6);
 	while (ptr[c])
 	{
-		if (ptr[c] == '\n')
-			backslach_n--;
+		backslash_n -= (ptr[c] == '\n' ? 1 : 0);
 		c++;
 	}
-	if (backslach_n != 0)
-		return (FAILURE);
-	return (SUCCESS);
+	if (backslash_n == -1)
+		return (SUCCESS);
+	return (FAILURE);
 }
 
 int		read_function(int fd_debug, t_filler *info)
@@ -70,8 +66,7 @@ int		read_function(int fd_debug, t_filler *info)
 		ret = read(0, buff, BUFF_SIZE);
 		buff[ret] = '\0';
 		info->output_vm = ft_strjoinfree(1, info->output_vm, buff);
-	//	dprintf(fd_debug, "ret =|%i|\n|%s|\n", ret, info->output_vm);
-	//	dprintf(fd_debug, "BEGIN\n");
 	}
+	//dprintf(fd_debug, "ret =|%i|\n|%s|\n", ret, info->output_vm);
 	return (ret);
 }

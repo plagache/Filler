@@ -2,6 +2,7 @@
 
 make
 rm -f output.txt
+rm -f resources/players/plagache.filler
 mv plagache.filler resources/players/
 ./resources/players/plagache.filler < 1map > output.txt
 cat output.txt

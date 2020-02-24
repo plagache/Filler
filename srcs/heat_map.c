@@ -17,7 +17,6 @@
 #include <string.h>
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
-#include "../libft/includes/get_next_line.h"
 
 /*
 ** #include "../libft/includes/ft_printf.h" **
@@ -99,6 +98,5 @@ int			call_mapping(t_filler *info)
 		value = to_fill;
 		to_fill++;
 	}
-//print_map(info->heat_map, info->fd_debug, info);
 	return (SUCCESS);
 }

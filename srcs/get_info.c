@@ -17,7 +17,6 @@
 #include <string.h>
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
-#include "../libft/includes/get_next_line.h"
 
 /*
 ** #include "../libft/includes/ft_printf.h" **
@@ -76,7 +75,7 @@ int			get_board(t_filler *info)
 	return (SUCCESS);
 }
 
-int			get_info(t_filler *info, int fd_debug, int turn)
+int			get_info(t_filler *info, int turn)
 {
 	if (get_board(info) == FAILURE || find_map(info) == FAILURE
 		|| find_piece(info) == FAILURE)
@@ -87,7 +86,6 @@ int			get_info(t_filler *info, int fd_debug, int turn)
 	info->m_column = ft_atoi(info->map[2]);
 	if (turn == 0)
 		find_player(info);
-	(void)fd_debug;
 	if (create_map(info) == FAILURE)
 		return (FAILURE);
 	best_score(info);

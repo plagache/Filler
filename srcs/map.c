@@ -17,7 +17,6 @@
 #include <string.h>
 #include "../includes/filler.h"
 #include "../libft/includes/libft.h"
-#include "../libft/includes/get_next_line.h"
 
 /*
 ** #include "../libft/includes/ft_printf.h" **
@@ -44,10 +43,10 @@ int			fill_base_map(t_filler *info)
 		while (column < info->m_column)
 		{
 			if (ft_strchr(info->pl_char,
-					info->info_vm[line + 3][column + 4]) != 0)
+					info->info_vm[line + 3][column + 4]) != NULL)
 				info->heat_map[line][column] = pl_value;
 			else if (ft_strchr(info->ad_char,
-					info->info_vm[line + 3][column + 4]) != 0)
+					info->info_vm[line + 3][column + 4]) != NULL)
 				info->heat_map[line][column] = ad_value;
 			else
 				info->heat_map[line][column] = base_value;
