@@ -86,6 +86,7 @@ int			get_info(t_filler *info, int turn)
 	info->m_column = ft_atoi(info->map[2]);
 	if (turn == 0)
 		find_player(info);
+	free(info->output_vm);
 	if (create_map(info) == FAILURE)
 		return (FAILURE);
 	best_score(info);
