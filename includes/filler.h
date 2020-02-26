@@ -45,4 +45,5 @@ int					print_map(short **board, int fd, t_filler *info);
 int					print_piece(short **board, int fd, t_filler *info);
 int					call_mapping(t_filler *info);
 void				best_score(t_filler *info);
+void				programme_clean(t_filler *info);
 #endif

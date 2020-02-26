@@ -95,11 +95,10 @@ int			main(void)
 	//	print_piece(info.heat_piece, fd_debug, &info);
 		ft_printf("%i %i\n", info.pos[0], info.pos[1]);
 		turn++;
-		free_arr((void**)info.piece);
-		free_arr((void**)info.map);
-		free_arr((void**)info.info_vm);
+	//	dprintf(info.fd_debug, "turn|%i|\n", turn);
+		programme_clean(&info);
 		//getchar();
-		return (EXIT_FAILURE);
+		//return (EXIT_FAILURE);
 	}
 	close(fd_debug);
 	return (EXIT_SUCCESS);

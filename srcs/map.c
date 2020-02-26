@@ -43,10 +43,10 @@ int			fill_base_map(t_filler *info)
 		while (column < info->m_column)
 		{
 			if (ft_strchr(info->pl_char,
-					info->info_vm[line + 3][column + 4]) != NULL)
+					info->map[line][column + 4]) != NULL)
 				info->heat_map[line][column] = pl_value;
 			else if (ft_strchr(info->ad_char,
-					info->info_vm[line + 3][column + 4]) != NULL)
+					info->map[line][column + 4]) != NULL)
 				info->heat_map[line][column] = ad_value;
 			else
 				info->heat_map[line][column] = base_value;
@@ -68,7 +68,7 @@ int			fill_piece(t_filler *info)
 		column = 0;
 		while (column < info->p_column)
 		{
-			if (info->info_vm[line + 4 + info->m_line][column] == '*')
+			if (info->piece[line][column] == '*')
 				info->heat_piece[line][column] = star_value;
 			else
 				info->heat_piece[line][column] = base_value;

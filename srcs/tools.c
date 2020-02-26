@@ -43,3 +43,21 @@ void		free_arr(void **arr)
 	}
 	free(arr);
 }
+
+void		free_ptr(t_filler *info)
+{
+	info->piece = NULL;
+	info->map = NULL;
+	info->info_vm = NULL;
+	info->heat_map = NULL;
+	info->heat_piece = NULL;
+}
+
+void		programme_clean(t_filler *info)
+{
+		free_arr((void**)info->info_vm);
+		free_arr((void**)info->heat_map);
+		free_arr((void**)info->heat_piece);
+		free_ptr(info);
+//		dprintf(info->fd_debug, "|fin de free|\n");
+}

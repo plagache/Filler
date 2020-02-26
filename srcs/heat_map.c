@@ -92,8 +92,9 @@ int			call_mapping(t_filler *info)
 
 	value = ad_value;
 	to_fill = 1;
-	while (is_zero(info) == TRUE)
+	while (is_zero(info) == TRUE && to_fill < 142)
 	{
+	//	dprintf(info->fd_debug, "search_value:|%i|\n", value);
 		search_value(info, value, to_fill);
 		value = to_fill;
 		to_fill++;

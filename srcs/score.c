@@ -55,7 +55,7 @@ int		is_placeable(t_filler *info, int c_line, int c_column)
 	}
 	if (counter == 1)
 	{
-		dprintf(info->fd_debug, "|%i|\n", counter);
+		//dprintf(info->fd_debug, "|%i|\n", counter);
 		return (TRUE);
 	}
 	return (FALSE);
@@ -68,6 +68,7 @@ void	best_score(t_filler *info)
 
 	line = 0;
 	info->pos[2] = 9999;
+	//dprintf(info->fd_debug, "|debut test de pos|\n");
 	while (line < info->m_line)
 	{
 		column = 0;
@@ -80,7 +81,7 @@ void	best_score(t_filler *info)
 					info->pos[0] = line;
 					info->pos[1] = column;
 					info->pos[2] = calcul_score(info, line, column);
-					dprintf(info->fd_debug, "|%i||%i|%i|\n", info->pos[0], info->pos[1], info->pos[2]);
+	//				dprintf(info->fd_debug, "|%i||%i|%i|\n", info->pos[0], info->pos[1], info->pos[2]);
 				}
 			}
 			column++;

@@ -49,7 +49,11 @@ int			find_piece(t_filler *info)
 	while (ft_strncmp(info->info_vm[c], "Piece ", 6) != 0)
 		c++;
 	info->piece = ft_strsplit(info->info_vm[c], ' ');
-	if (info->piece == NULL)
+	info->p_line = ft_atoi(info->piece[1]);
+	info->p_column = ft_atoi(info->piece[2]);
+	free_arr((void**)info->piece);
+	info->piece = info->info_vm + c + 1;
+	if (info->piece == NULL || info->p_line == 0 || info->p_column == 0)
 		return (FAILURE);
 	return (SUCCESS);
 }
@@ -62,7 +66,11 @@ int			find_map(t_filler *info)
 	while (ft_strncmp(info->info_vm[c], "Plateau ", 8) != 0)
 		c++;
 	info->map = ft_strsplit(info->info_vm[c], ' ');
-	if (info->map == NULL)
+	info->m_line = ft_atoi(info->map[1]);
+	info->m_column = ft_atoi(info->map[2]);
+	free_arr((void**)info->map);
+	info->map = info->info_vm + c + 2;
+	if (info->map == NULL || info->m_line == 0 || info->m_column == 0)
 		return (FAILURE);
 	return (SUCCESS);
 }
@@ -80,13 +88,9 @@ int			get_info(t_filler *info, int turn)
 	if (get_board(info) == FAILURE || find_map(info) == FAILURE
 		|| find_piece(info) == FAILURE)
 		return (FAILURE);
-	info->p_line = ft_atoi(info->piece[1]);
-	info->p_column = ft_atoi(info->piece[2]);
-	info->m_line = ft_atoi(info->map[1]);
-	info->m_column = ft_atoi(info->map[2]);
 	if (turn == 0)
 		find_player(info);
-	free(info->output_vm);
+	ft_strdel(&(info->output_vm));
 	if (create_map(info) == FAILURE)
 		return (FAILURE);
 	best_score(info);

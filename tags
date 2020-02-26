@@ -5,25 +5,26 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ARG_H	libft/includes/arg.h	14;"	d
+BUFF_SIZE	includes/filler.h	9;"	d
 BUFF_SIZE	libft/includes/get_next_line.h	15;"	d
-D	resources/players/plagache.filler.dSYM/Contents/Resources/DWARF/plagache.filler	/^/;"	v
-FAILURE	includes/filler.h	13;"	d
-FALSE	includes/filler.h	9;"	d
+FAILURE	includes/filler.h	15;"	d
+FALSE	includes/filler.h	11;"	d
 FALSE	libft/includes/libft.h	19;"	d
 FILLER_H	includes/filler.h	2;"	d
 FLAGSMAX	libft/includes/arg.h	16;"	d
 FT_PRINTF_H	libft/includes/ft_printf.h	14;"	d
 GET_NEXT_LINE_H	libft/includes/get_next_line.h	14;"	d
 LIBFT_H	libft/includes/libft.h	14;"	d
-SUCCESS	includes/filler.h	12;"	d
-TRUE	includes/filler.h	10;"	d
+SUCCESS	includes/filler.h	14;"	d
+TRUE	includes/filler.h	12;"	d
 TRUE	libft/includes/libft.h	20;"	d
+X	libft/libft.a	/^/;"	v
 ad_char	includes/filler.h	/^	char	ad_char[3];$/;"	m	struct:s_filler
-ad_value	includes/filler.h	17;"	d
+ad_value	includes/filler.h	19;"	d
 add_strings	libft/srcs/float_tools.c	/^void	add_strings(char *dst, char *src, int len)$/;"	f
 apply_d_rounding	libft/srcs/float_tools.c	/^void	apply_d_rounding(t_d_arrs *a_ptr, int prec)$/;"	f
 apply_ld_rounding	libft/srcs/float_tools.c	/^void	apply_ld_rounding(t_ld_arrs *a_ptr, int prec)$/;"	f
-base_value	includes/filler.h	15;"	d
+base_value	includes/filler.h	17;"	d
 best_score	srcs/score.c	/^void	best_score(t_filler *info)$/;"	f
 blank	libft/srcs/ft_strtrim.c	/^static int		blank(char const *s)$/;"	f	file:
 calc_len_address	libft/srcs/address_tools.c	/^int		calc_len_address(t_conv_id *s_ptr, unsigned long value)$/;"	f
@@ -51,11 +52,13 @@ conv	libft/includes/arg.h	/^	char	conv;$/;"	m	struct:s_conv_info
 conv_path	libft/srcs/ft_printf.c	/^t_point		conv_path(const char *fmt, va_list *arg_ptr)$/;"	f
 countwords	libft/srcs/ft_strsplit.c	/^static size_t		countwords(char const *s, char c)$/;"	f	file:
 create_map	srcs/map.c	/^int			create_map(t_filler *info)$/;"	f
+d	libft/libft.a	/^/;"	v
 divide_str_by_two	libft/srcs/float_tools.c	/^void	divide_str_by_two(char *str, int len)$/;"	f
 double_exponant	libft/srcs/double_tools.c	/^void	double_exponant(t_s_e_m *dble_ptr, t_d_arrs *a_ptr)$/;"	f
 double_mantissa	libft/srcs/double_tools.c	/^void	double_mantissa(t_s_e_m *dble_ptr, t_d_arrs *a_ptr)$/;"	f
 double_rounding	libft/srcs/double_tools.c	/^void	double_rounding(t_d_arrs *a_ptr, t_conv_id *s_ptr)$/;"	f
 e	libft/includes/arg.h	/^	unsigned short		e;$/;"	m	struct:s_double
+end_of_read	srcs/read.c	/^int		end_of_read(t_filler *info)$/;"	f
 fd	libft/includes/get_next_line.h	/^	int				fd;$/;"	m	struct:s_data
 fd_debug	includes/filler.h	/^	int		fd_debug;$/;"	m	struct:s_filler
 fill_arr	libft/srcs/func_selector.c	/^void			fill_arr(t_conv_func *arr)$/;"	f
@@ -72,6 +75,7 @@ flag	libft/srcs/pflags.c	/^int		flag(char *ptr, int end, t_conv_id *struct_ptr)$
 flags	libft/includes/arg.h	/^	char	flags;$/;"	m	struct:s_conv_info
 flags_in_struct	libft/srcs/pflags.c	/^void	flags_in_struct(char c, t_conv_id *struct_ptr)$/;"	f
 free_arr	srcs/tools.c	/^void		free_arr(void **arr)$/;"	f
+free_ptr	srcs/tools.c	/^void		free_ptr(t_filler *info)$/;"	f
 free_struct	libft/srcs/get_next_line.c	/^void			free_struct(t_data *current, t_list **lst)$/;"	f
 ft_2lstaddend	libft/srcs/ft_2lstaddend.c	/^void	ft_2lstaddend(t_dlist **lst, t_dlist *link)$/;"	f
 ft_2lstaddstrt	libft/srcs/ft_2lstaddstrt.c	/^void	ft_2lstaddstrt(t_dlist **lst, t_dlist *link)$/;"	f
@@ -161,7 +165,7 @@ get_address_value	libft/srcs/address_tools.c	/^void	get_address_value(unsigned l
 get_board	srcs/get_info.c	/^int			get_board(t_filler *info)$/;"	f
 get_double_value	libft/srcs/double_tools.c	/^void	get_double_value(va_list *arg_ptr, t_s_e_m *dble_ptr)$/;"	f
 get_func	libft/srcs/func_selector.c	/^t_conv_func		get_func(char c)$/;"	f
-get_info	srcs/get_info.c	/^int			get_info(t_filler *info, int fd_debug, int turn)$/;"	f
+get_info	srcs/get_info.c	/^int			get_info(t_filler *info, int turn)$/;"	f
 get_int_value	libft/srcs/int_tools.c	/^void	get_int_value(long long int *val_ptr, va_list *arg_ptr,$/;"	f
 get_ldouble_value	libft/srcs/ldouble_tools.c	/^void	get_ldouble_value(va_list *arg_ptr, t_s_e_m *dble_ptr)$/;"	f
 get_next_line	libft/srcs/get_next_line.c	/^int				get_next_line(const int fd, char **line)$/;"	f
@@ -230,19 +234,17 @@ p_line	includes/filler.h	/^	int		p_line;$/;"	m	struct:s_filler
 parsing	libft/srcs/ft_printf.c	/^int			parsing(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
 piece	includes/filler.h	/^	char 	**piece;$/;"	m	struct:s_filler
 piece_char	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, :live, :file_name$/;"	v
-piece_column	includes/filler.h	/^	int		piece_column;$/;"	m	struct:s_filler
-piece_line	includes/filler.h	/^	int		piece_line;$/;"	m	struct:s_filler
 pl_char	includes/filler.h	/^	char	pl_char[3];$/;"	m	struct:s_filler
-pl_value	includes/filler.h	16;"	d
+pl_value	includes/filler.h	18;"	d
 player	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
 pos	includes/filler.h	/^	int		pos[3];$/;"	m	struct:s_filler
 precision	libft/includes/arg.h	/^	int		precision;$/;"	m	struct:s_conv_info
 precision	libft/srcs/pprecision.c	/^int		precision(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
 precision_in_struct	libft/srcs/pprecision.c	/^void	precision_in_struct(char c, t_conv_id *struct_ptr)$/;"	f
 prev	libft/includes/libft.h	/^	struct s_dlist	*prev;$/;"	m	struct:s_dlist	typeref:struct:s_dlist::s_dlist
-print_info	srcs/main.c	/^int			print_info(char **board, int fd)$/;"	f
 print_map	srcs/main.c	/^int			print_map(short **board, int fd, t_filler *info)$/;"	f
 print_piece	srcs/main.c	/^int			print_piece(short **board, int fd, t_filler *info)$/;"	f
+programme_clean	srcs/tools.c	/^void		programme_clean(t_filler *info)$/;"	f
 read	libft/includes/arg.h	/^	int	read;$/;"	m	struct:s_point
 read_function	srcs/read.c	/^int		read_function(int fd_debug, t_filler *info)$/;"	f
 readline	libft/srcs/get_next_line.c	/^int				readline(t_data *current)$/;"	f
@@ -260,7 +262,7 @@ score	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, 
 search_value	srcs/heat_map.c	/^void			search_value(t_filler *info, int value, int to_fill)$/;"	f
 sid	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
 special_value	libft/srcs/special_tools.c	/^void	special_value(t_s_e_m *dble_ptr, t_conv_id *s_ptr, int len)$/;"	f
-star_value	includes/filler.h	18;"	d
+star_value	includes/filler.h	20;"	d
 stdin	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, :live, :file_name$/;"	v
 stdout	resources/filler_vm	/^			self.stdin, @stdout, @wait_thr = Open3.popen2(@file_name)$/;"	v
 str	libft/includes/arg.h	/^	char				*str;$/;"	m	struct:s_double
