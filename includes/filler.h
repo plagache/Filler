@@ -32,6 +32,10 @@ typedef struct		s_filler
 	int		pos[3];
 	int		p_line;
 	int		p_column;
+	int		offset_l;
+	int		offset_c;
+	int		diff_l;
+	int		diff_c;
 	int		m_line;
 	int		m_column;
 	int		fd_debug;
@@ -46,4 +50,5 @@ int					print_piece(short **board, int fd, t_filler *info);
 int					call_mapping(t_filler *info);
 void				best_score(t_filler *info);
 void				programme_clean(t_filler *info);
+void				offset_piece(t_filler *info);
 #endif

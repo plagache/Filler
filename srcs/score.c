@@ -37,11 +37,11 @@ int		is_placeable(t_filler *info, int c_line, int c_column)
 	int column;
 
 	counter = 0;
-	line = 0;
-	while (c_line + line < info->m_line && line < info->p_line)
+	line = info->offset_l;
+	while (c_line + line < info->m_line && line < (info->p_line - info->diff_l))
 	{
-		column = 0;
-		while (c_column + column < info->m_column && column < info->p_column)
+		column = info->offset_c;
+		while (c_column + column < info->m_column && column < (info->p_column - info->diff_c))
 		{
 			if (info->heat_map[line + c_line][column + c_column] == ad_value
 					&& info->heat_piece[line][column] == star_value)
@@ -66,13 +66,14 @@ void	best_score(t_filler *info)
 	int line;
 	int column;
 
-	line = 0;
+	offset_piece(info);
+	line = 0 - info->offset_l;
 	info->pos[2] = 9999;
 	//dprintf(info->fd_debug, "|debut test de pos|\n");
-	while (line < info->m_line)
+	while ((line + (info->p_line - info->diff_l)) < info->m_line)
 	{
-		column = 0;
-		while (column < info->m_column)
+		column = 0 - info->offset_c;
+		while (column + info->p_column - info->diff_c < info->m_column)
 		{
 			if (is_placeable(info, line, column) == TRUE)	
 			{
@@ -81,7 +82,7 @@ void	best_score(t_filler *info)
 					info->pos[0] = line;
 					info->pos[1] = column;
 					info->pos[2] = calcul_score(info, line, column);
-	//				dprintf(info->fd_debug, "|%i||%i|%i|\n", info->pos[0], info->pos[1], info->pos[2]);
+					dprintf(info->fd_debug, "|%i||%i|%i|\n", info->pos[0], info->pos[1], info->pos[2]);
 				}
 			}
 			column++;

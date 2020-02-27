@@ -90,6 +90,7 @@ int			main(void)
 	{
 		read_function(fd_debug, &info);
 		get_info(&info, turn);
+		offset_piece(&info);
 	//	print_map(info.heat_map, fd_debug, &info);
 	//	dprintf(fd_debug, "\n");
 	//	print_piece(info.heat_piece, fd_debug, &info);
@@ -97,6 +98,8 @@ int			main(void)
 		turn++;
 	//	dprintf(info.fd_debug, "turn|%i|\n", turn);
 		programme_clean(&info);
+		if (info.pos[2] == 9999)
+			return (EXIT_SUCCESS);
 		//getchar();
 		//return (EXIT_FAILURE);
 	}

@@ -7,6 +7,7 @@ SRC=	main.c\
 		map.c\
 		heat_map.c\
 		score.c\
+		offset.c\
 
 SRCS = $(addprefix srcs/,$(SRC))
 
