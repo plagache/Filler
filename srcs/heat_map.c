@@ -99,5 +99,6 @@ int			call_mapping(t_filler *info)
 		value = to_fill;
 		to_fill++;
 	}
+//	dprintf(info->fd_debug, "turn fin mapping =|%i|\n", info->turn);
 	return (SUCCESS);
 }

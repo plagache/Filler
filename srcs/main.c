@@ -79,23 +79,22 @@ int			print_piece(short **board, int fd, t_filler *info)
 int			main(void)
 {
 	int			fd_debug;
-	int			turn;
 	t_filler	info;
 
-	turn = 0;
+	info.turn = 0;
 	fd_debug = open("output.txt", O_RDWR | O_APPEND);
 	ft_bzero(&info, sizeof(info));
 	info.fd_debug = fd_debug;
 	while (1)
 	{
 		read_function(fd_debug, &info);
-		get_info(&info, turn);
+		get_info(&info, info.turn);
 		offset_piece(&info);
 	//	print_map(info.heat_map, fd_debug, &info);
 	//	dprintf(fd_debug, "\n");
 	//	print_piece(info.heat_piece, fd_debug, &info);
 		ft_printf("%i %i\n", info.pos[0], info.pos[1]);
-		turn++;
+		info.turn++;
 	//	dprintf(info.fd_debug, "turn|%i|\n", turn);
 		programme_clean(&info);
 		if (info.pos[2] == 9999)

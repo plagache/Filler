@@ -129,5 +129,6 @@ int			create_map(t_filler *info)
 			|| fill_piece(info) == FAILURE)
 		return (FAILURE);
 	call_mapping(info);
+//	dprintf(info->fd_debug, "turn create map =|%i|\n", info->turn);
 	return (SUCCESS);
 }

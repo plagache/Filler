@@ -1,6 +1,4 @@
-seed = 1935
-X: error on input
-players/plagache.filler: Segfault at 32
-players/carli.filler won
+seed = 6781
+players/plagache.filler won
 Score:
-338AGAINST32
+34AGAINST112

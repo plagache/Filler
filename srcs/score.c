@@ -13,10 +13,10 @@ int		calcul_score(t_filler *info, int c_line, int c_column)
 	int column;
 
 	counter = 0;
-	line = 0;
-	while (line < info->p_line)
+	line = info->offset_l;
+	while (line < info->p_line - info->diff_l)
 	{
-		column = 0;
+		column = info->offset_c;
 		while (column < info->p_column)
 		{
 			if (info->heat_map[line + c_line][column + c_column] != ad_value
@@ -70,6 +70,7 @@ void	best_score(t_filler *info)
 	line = 0 - info->offset_l;
 	info->pos[2] = 9999;
 	//dprintf(info->fd_debug, "|debut test de pos|\n");
+//	dprintf(info->fd_debug, "turn debut score =|%i|\n", info->turn);
 	while ((line + (info->p_line - info->diff_l)) < info->m_line)
 	{
 		column = 0 - info->offset_c;
@@ -89,5 +90,6 @@ void	best_score(t_filler *info)
 		}
 		line++;
 	}
+//	dprintf(info->fd_debug, "turn fin de score =|%i|\n", info->turn);
 	//test toutes les positions et retien les pos du best_score 
 }

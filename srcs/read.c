@@ -67,6 +67,7 @@ int		read_function(int fd_debug, t_filler *info)
 		buff[ret] = '\0';
 		info->output_vm = ft_strjoinfree(1, info->output_vm, buff);
 	}
-	//dprintf(fd_debug, "ret =|%i|\n|%s|\n", ret, info->output_vm);
+//	dprintf(fd_debug, "ret =|%i|\n|%s|\n", ret, info->output_vm);
+//	dprintf(fd_debug, "turn read =|%i|\n", info->turn);
 	return (ret);
 }

@@ -39,6 +39,7 @@ typedef struct		s_filler
 	int		m_line;
 	int		m_column;
 	int		fd_debug;
+	int		turn;
 }					t_filler;
 
 int					read_function(int fd, t_filler *info);
