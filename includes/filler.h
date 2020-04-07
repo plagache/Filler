@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-# define BUFF_SIZE 200
+# define BUFF_SIZE 4096
 
 # define FALSE 0
 # define TRUE 1

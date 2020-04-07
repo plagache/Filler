@@ -90,8 +90,8 @@ int			main(void)
 		read_function(fd_debug, &info);
 		get_info(&info, info.turn);
 		offset_piece(&info);
+		//dprintf(fd_debug, "after algo\n");
 	//	print_map(info.heat_map, fd_debug, &info);
-	//	dprintf(fd_debug, "\n");
 	//	print_piece(info.heat_piece, fd_debug, &info);
 		ft_printf("%i %i\n", info.pos[0], info.pos[1]);
 		info.turn++;

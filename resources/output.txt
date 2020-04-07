@@ -1,923 +1,383 @@
-turn read =|0|
-turn fin mapping =|0|
-turn create map =|0|
-turn debut score =|0|
-|11||6|50|
-turn fin de score =|0|
-turn read =|1|
-turn fin mapping =|1|
-turn create map =|1|
-turn debut score =|1|
-|10||9|8|
-turn fin de score =|1|
-turn read =|2|
-turn fin mapping =|2|
-turn create map =|2|
-turn debut score =|2|
-|9||9|14|
-turn fin de score =|2|
-turn read =|3|
-turn fin mapping =|3|
-turn create map =|3|
-turn debut score =|3|
-|9||10|5|
-turn fin de score =|3|
-turn read =|4|
-turn fin mapping =|4|
-turn create map =|4|
-turn debut score =|4|
-|8||10|5|
-turn fin de score =|4|
-turn read =|5|
-turn fin mapping =|5|
-turn create map =|5|
-turn debut score =|5|
-|8||8|7|
-|8||9|4|
-turn fin de score =|5|
-turn read =|6|
-turn fin mapping =|6|
-turn create map =|6|
-turn debut score =|6|
-|7||9|5|
-|8||9|3|
-|10||10|2|
-turn fin de score =|6|
-turn read =|7|
-turn fin mapping =|7|
-turn create map =|7|
-turn debut score =|7|
-|7||8|5|
-|8||8|2|
-turn fin de score =|7|
-turn read =|8|
-turn fin mapping =|8|
-turn create map =|8|
-turn debut score =|8|
-|7||9|3|
-|9||9|1|
-turn fin de score =|8|
-turn read =|9|
-turn fin mapping =|9|
-turn create map =|9|
-turn debut score =|9|
-|7||8|3|
-turn fin de score =|9|
-turn read =|10|
-turn fin mapping =|10|
-turn create map =|10|
-turn debut score =|10|
-|6||7|5|
-|12||12|4|
-turn fin de score =|10|
-turn read =|11|
-turn fin mapping =|11|
-turn create map =|11|
-turn debut score =|11|
-|7||7|1|
-turn fin de score =|11|
-turn read =|12|
-turn fin mapping =|12|
-turn create map =|12|
-turn debut score =|12|
-|6||7|3|
-|8||8|2|
-turn fin de score =|12|
-turn read =|13|
-turn fin mapping =|13|
-turn create map =|13|
-turn debut score =|13|
-|6||6|5|
-|9||7|2|
-turn fin de score =|13|
-turn read =|14|
-turn fin mapping =|14|
-turn create map =|14|
-turn debut score =|14|
-|7||5|2|
-turn fin de score =|14|
-turn read =|15|
-turn fin mapping =|15|
-turn create map =|15|
-turn debut score =|15|
-|6||5|3|
-|9||7|1|
-turn fin de score =|15|
-turn read =|16|
-turn fin mapping =|16|
-turn create map =|16|
-turn debut score =|16|
-|7||4|1|
-turn fin de score =|16|
-turn read =|17|
-turn fin mapping =|17|
-turn create map =|17|
-turn debut score =|17|
-|7||3|1|
-turn fin de score =|17|
-turn read =|18|
-turn fin mapping =|18|
-turn create map =|18|
-turn debut score =|18|
-|6||1|3|
-|9||5|2|
-turn fin de score =|18|
-turn read =|19|
-turn fin mapping =|19|
-turn create map =|19|
-turn debut score =|19|
-|7||1|1|
-turn fin de score =|19|
-turn read =|20|
-turn fin mapping =|20|
-turn create map =|20|
-turn debut score =|20|
-|6||2|4|
-|11||14|3|
-|12||14|1|
-turn fin de score =|20|
-turn read =|21|
-turn fin mapping =|21|
-turn create map =|21|
-turn debut score =|21|
-|7||0|2|
-|12||13|1|
-turn fin de score =|21|
-turn read =|22|
-turn fin mapping =|22|
-turn create map =|22|
-turn debut score =|22|
-|6||1|2|
-turn fin de score =|22|
-turn read =|23|
-turn fin mapping =|23|
-turn create map =|23|
-turn debut score =|23|
-|6||8|39|
-|7||11|31|
-|10||13|16|
-turn fin de score =|23|
-turn read =|24|
-turn fin mapping =|24|
-turn create map =|24|
-turn debut score =|24|
-|6||1|5|
-|7||1|1|
-turn fin de score =|24|
-turn read =|25|
-turn fin mapping =|25|
-turn create map =|25|
-turn debut score =|25|
-|7||0|5|
-|7||8|0|
-turn fin de score =|25|
-turn read =|26|
-turn fin mapping =|26|
-turn create map =|26|
-turn debut score =|26|
-|3||8|157|
-|4||10|124|
-|6||11|94|
-|7||-1|33|
-turn fin de score =|26|
-turn read =|27|
-turn fin mapping =|27|
-turn create map =|27|
-turn debut score =|27|
-|7||0|23|
-|7||9|11|
-|8||11|8|
-|9||2|1|
-turn fin de score =|27|
-turn read =|28|
-turn fin mapping =|28|
-turn create map =|28|
-turn debut score =|28|
-|6||1|21|
-|6||2|20|
-|6||3|19|
-|6||4|18|
-|6||5|17|
-|6||6|16|
-|6||7|15|
-|6||8|14|
-|6||9|13|
-|7||10|11|
-|7||11|10|
-|9||13|6|
-|10||3|2|
-turn fin de score =|28|
-turn read =|29|
-turn fin mapping =|29|
-turn create map =|29|
-turn debut score =|29|
-|7||0|23|
-|7||9|11|
-|8||11|8|
-|9||11|7|
-|10||3|1|
-turn fin de score =|29|
-turn read =|30|
-turn fin mapping =|30|
-turn create map =|30|
-turn debut score =|30|
-|7||-1|23|
-|7||8|11|
-|8||10|8|
-|9||10|7|
-|10||12|4|
-|11||2|1|
-turn fin de score =|30|
-turn read =|31|
-turn fin mapping =|31|
-turn create map =|31|
-turn debut score =|31|
-|6||1|21|
-|6||2|20|
-|6||3|19|
-|6||4|18|
-|6||5|17|
-|6||6|16|
-|6||7|15|
-|6||8|14|
-|6||9|13|
-|7||10|11|
-|7||11|10|
-|9||13|6|
-|10||14|4|
-|10||15|3|
-|11||1|2|
-|11||2|1|
-turn fin de score =|31|
-turn read =|32|
-turn fin mapping =|32|
-turn create map =|32|
-turn debut score =|32|
-|6||1|21|
-|6||2|20|
-|6||3|19|
-|6||4|18|
-|6||5|17|
-|6||6|16|
-|6||7|15|
-|6||8|14|
-|6||9|13|
-|7||10|11|
-|7||11|10|
-|9||13|6|
-|10||14|4|
-|10||15|3|
-|11||1|2|
-turn fin de score =|32|
-turn read =|33|
-turn fin mapping =|33|
-turn create map =|33|
-turn debut score =|33|
-|7||0|23|
-|7||9|0|
-turn fin de score =|33|
-turn read =|34|
-turn fin mapping =|34|
-turn create map =|34|
-turn debut score =|34|
-|7||10|19|
-|8||11|15|
-|9||11|13|
-|10||12|12|
-|10||13|7|
-turn fin de score =|34|
-turn read =|35|
-turn fin mapping =|35|
-turn create map =|35|
-turn debut score =|35|
-|6||0|43|
-|6||1|41|
-|6||2|39|
-|6||3|37|
-|6||4|35|
-|6||5|33|
-|6||6|31|
-|6||7|29|
-|6||8|27|
-|6||9|25|
-|8||11|15|
-|9||12|13|
-|9||13|11|
-|9||14|9|
-turn fin de score =|35|
-turn read =|36|
-turn fin mapping =|36|
-turn create map =|36|
-turn debut score =|36|
-|6||1|21|
-|6||2|20|
-|6||3|19|
-|6||4|18|
-|6||5|17|
-|6||6|16|
-|6||7|15|
-|6||8|14|
-|6||9|13|
-|6||10|12|
-|7||11|10|
-|8||14|6|
-|8||15|5|
-|11||0|2|
-turn fin de score =|36|
-turn read =|37|
-turn fin mapping =|37|
-turn create map =|37|
-turn debut score =|37|
-|6||-1|21|
-|6||0|20|
-|6||1|19|
-|6||2|18|
-|6||3|17|
-|6||4|16|
-|6||5|15|
-|6||6|14|
-|6||7|13|
-|6||8|12|
-|7||9|10|
-|8||12|6|
-|8||13|5|
-|12||-2|1|
-turn fin de score =|37|
-turn read =|38|
-turn fin mapping =|38|
-turn create map =|38|
-turn debut score =|38|
-|6||1|21|
-|6||2|20|
-|6||3|19|
-|6||4|18|
-|6||5|17|
-|6||6|16|
-|6||7|15|
-|6||8|14|
-|6||9|13|
-|6||10|12|
-|7||11|10|
-|8||14|6|
-|8||15|5|
-turn fin de score =|38|
-turn read =|39|
-turn fin mapping =|39|
-turn create map =|39|
-turn debut score =|39|
-|7||-1|23|
-|7||9|10|
-|8||13|8|
-turn fin de score =|39|
-turn read =|40|
-turn fin mapping =|40|
-turn create map =|40|
-turn debut score =|40|
-|6||0|66|
-|6||10|33|
-|7||11|29|
-|7||13|24|
-turn fin de score =|40|
-turn read =|41|
-turn fin mapping =|41|
-turn create map =|41|
-turn debut score =|41|
-|7||0|23|
-|7||10|12|
-|7||12|11|
-|7||14|6|
-turn fin de score =|41|
-turn read =|42|
-turn fin mapping =|42|
-turn create map =|42|
-turn debut score =|42|
-|7||0|23|
-|7||10|12|
-|7||12|11|
-turn fin de score =|42|
-turn read =|43|
-turn fin mapping =|43|
-turn create map =|43|
-turn debut score =|43|
-|8||11|0|
-turn fin de score =|43|
-turn read =|44|
-turn fin mapping =|44|
-turn create map =|44|
-turn debut score =|44|
-|6||0|21|
-|6||1|20|
-|6||2|19|
-|6||3|18|
-|6||4|17|
-|6||5|16|
-|6||6|15|
-|6||7|14|
-|6||8|13|
-|6||9|12|
-|6||11|10|
-|6||12|9|
-|6||13|8|
-|6||14|7|
-|9||11|0|
-turn fin de score =|44|
-turn read =|45|
-turn fin mapping =|45|
-turn create map =|45|
-turn debut score =|45|
-|6||0|45|
-|6||10|24|
-|6||11|23|
-turn fin de score =|45|
-turn read =|46|
-turn fin mapping =|46|
-turn create map =|46|
-turn debut score =|46|
-|5||11|12|
-|6||12|10|
-|6||13|9|
-|6||14|8|
-|6||15|7|
-turn fin de score =|46|
-turn read =|47|
-turn fin mapping =|47|
-turn create map =|47|
-turn debut score =|47|
-|5||10|26|
-|5||11|23|
-|5||14|18|
-turn fin de score =|47|
-turn read =|48|
-turn fin mapping =|48|
-turn create map =|48|
-turn debut score =|48|
-|5||13|23|
-turn fin de score =|48|
-turn read =|49|
-turn fin mapping =|49|
-turn create map =|49|
-turn debut score =|49|
-|4||12|24|
-turn fin de score =|49|
-turn read =|50|
-turn fin mapping =|50|
-turn create map =|50|
-turn debut score =|50|
-|3||12|14|
-|3||13|10|
-|5||11|0|
-turn fin de score =|50|
-turn read =|51|
-turn fin mapping =|51|
-turn create map =|51|
-turn debut score =|51|
-|4||11|14|
-|4||12|10|
-|6||11|0|
-turn fin de score =|51|
-turn read =|52|
-turn fin mapping =|52|
-turn create map =|52|
-turn debut score =|52|
-|4||11|29|
-|4||12|24|
-|4||13|19|
-turn fin de score =|52|
-turn read =|53|
-turn fin mapping =|53|
-turn create map =|53|
-turn debut score =|53|
-|4||11|14|
-turn fin de score =|53|
-turn read =|54|
-turn fin mapping =|54|
-turn create map =|54|
-turn debut score =|54|
-|3||12|13|
-|3||13|12|
-|3||14|11|
-|3||15|10|
-turn fin de score =|54|
-turn read =|55|
-turn fin mapping =|55|
-turn create map =|55|
-turn debut score =|55|
-|2||15|11|
-turn fin de score =|55|
-turn read =|56|
-turn fin mapping =|56|
-turn create map =|56|
-turn debut score =|56|
-|2||13|29|
-turn fin de score =|56|
-turn read =|57|
-turn fin mapping =|57|
-turn create map =|57|
-turn debut score =|57|
-|2||12|16|
-turn fin de score =|57|
-turn read =|58|
-turn fin mapping =|58|
-turn create map =|58|
-turn debut score =|58|
-|2||11|17|
-turn fin de score =|58|
-turn read =|59|
-turn fin mapping =|59|
-turn create map =|59|
-turn debut score =|59|
-|2||9|37|
-turn fin de score =|59|
-turn read =|60|
-turn fin mapping =|60|
-turn create map =|60|
-turn debut score =|60|
-|2||8|20|
-turn fin de score =|60|
-turn read =|61|
-turn fin mapping =|61|
-turn create map =|61|
-turn debut score =|61|
-|1||6|40|
-turn fin de score =|61|
-turn read =|62|
-turn fin mapping =|62|
-turn create map =|62|
-turn debut score =|62|
-|0||7|42|
-|0||8|37|
-turn fin de score =|62|
-turn read =|63|
-turn fin mapping =|63|
-turn create map =|63|
-turn debut score =|63|
-|0||8|0|
-turn fin de score =|63|
-turn read =|64|
-turn fin mapping =|64|
-turn create map =|64|
-turn debut score =|64|
-|1||7|0|
-turn fin de score =|64|
-turn read =|65|
-turn fin mapping =|65|
-turn create map =|65|
-turn debut score =|65|
-|0||7|0|
-turn fin de score =|65|
-turn read =|66|
-turn fin mapping =|66|
-turn create map =|66|
-turn debut score =|66|
-|0||5|0|
-turn fin de score =|66|
-turn read =|67|
-turn fin mapping =|67|
-turn create map =|67|
-turn debut score =|67|
-|0||5|0|
-turn fin de score =|67|
-turn read =|68|
-turn fin mapping =|68|
-turn create map =|68|
-turn debut score =|68|
-|0||4|0|
-turn fin de score =|68|
-turn read =|69|
-turn fin mapping =|69|
-turn create map =|69|
-turn debut score =|69|
-|0||2|0|
-turn fin de score =|69|
-turn read =|70|
-turn fin mapping =|70|
-turn create map =|70|
-turn debut score =|70|
-|0||1|0|
-turn fin de score =|70|
-turn read =|71|
-turn fin mapping =|71|
-turn create map =|71|
-turn debut score =|71|
-|0||1|0|
-turn fin de score =|71|
-turn read =|72|
-turn fin mapping =|72|
-turn create map =|72|
-turn debut score =|72|
-|0||0|0|
-turn fin de score =|72|
-turn read =|73|
-turn fin mapping =|73|
-turn create map =|73|
-turn debut score =|73|
-|0||0|0|
-turn fin de score =|73|
-turn read =|74|
-turn fin mapping =|74|
-turn create map =|74|
-turn debut score =|74|
-|0||2|0|
-turn fin de score =|74|
-turn read =|75|
-turn fin mapping =|75|
-turn create map =|75|
-turn debut score =|75|
-|1||5|0|
-turn fin de score =|75|
-turn read =|76|
-turn fin mapping =|76|
-turn create map =|76|
-turn debut score =|76|
-|1||0|0|
-turn fin de score =|76|
-turn read =|77|
-turn fin mapping =|77|
-turn create map =|77|
-turn debut score =|77|
-|0||9|0|
-turn fin de score =|77|
-turn read =|78|
-turn fin mapping =|78|
-turn create map =|78|
-turn debut score =|78|
-|0||10|33|
-|2||0|0|
-turn fin de score =|78|
-turn read =|79|
-turn fin mapping =|79|
-turn create map =|79|
-turn debut score =|79|
-|0||10|17|
-|1||3|0|
-turn fin de score =|79|
-turn read =|80|
-turn fin mapping =|80|
-turn create map =|80|
-turn debut score =|80|
-|0||10|50|
-|2||3|0|
-turn fin de score =|80|
-turn read =|81|
-turn fin mapping =|81|
-turn create map =|81|
-turn debut score =|81|
-|-1||10|17|
-|1||5|0|
-turn fin de score =|81|
-turn read =|82|
-turn fin mapping =|82|
-turn create map =|82|
-turn debut score =|82|
-|2||-1|0|
-turn fin de score =|82|
-turn read =|83|
-turn fin mapping =|83|
-turn create map =|83|
-turn debut score =|83|
-|0||10|0|
-turn fin de score =|83|
-turn read =|84|
-turn fin mapping =|84|
-turn create map =|84|
-turn debut score =|84|
-|0||10|17|
-|0||11|16|
-|1||12|15|
-|1||13|14|
-|1||14|13|
-|1||15|12|
-|2||2|0|
-turn fin de score =|84|
-turn read =|85|
-turn fin mapping =|85|
-turn create map =|85|
-turn debut score =|85|
-|0||11|16|
-|3||4|0|
-turn fin de score =|85|
-turn read =|86|
-turn fin mapping =|86|
-turn create map =|86|
-turn debut score =|86|
-|0||10|17|
-|0||11|16|
-|1||12|15|
-|1||13|14|
-|1||14|13|
-|1||15|12|
-|2||6|0|
-turn fin de score =|86|
-turn read =|87|
-turn fin mapping =|87|
-turn create map =|87|
-turn debut score =|87|
-|0||10|17|
-|0||11|16|
-|1||12|15|
-|1||13|14|
-|1||14|13|
-|1||15|12|
-|2||7|0|
-turn fin de score =|87|
-turn read =|88|
-turn fin mapping =|88|
-turn create map =|88|
-turn debut score =|88|
-|-1||11|16|
-|2||7|0|
-turn fin de score =|88|
-turn read =|89|
-turn fin mapping =|89|
-turn create map =|89|
-turn debut score =|89|
-|0||11|31|
-|1||12|29|
-|1||13|27|
-|1||14|25|
-|3||8|0|
-turn fin de score =|89|
-turn read =|90|
-turn fin mapping =|90|
-turn create map =|90|
-turn debut score =|90|
-|0||11|16|
-|3||9|0|
-turn fin de score =|90|
-turn read =|91|
-turn fin mapping =|91|
-turn create map =|91|
-turn debut score =|91|
-|0||11|16|
-|3||10|0|
-turn fin de score =|91|
-turn read =|92|
-turn fin mapping =|92|
-turn create map =|92|
-turn debut score =|92|
-|0||10|17|
-|0||11|16|
-|1||12|15|
-|1||13|14|
-|1||14|13|
-|1||15|12|
-|2||12|0|
-turn fin de score =|92|
-turn read =|93|
-turn fin mapping =|93|
-turn create map =|93|
-turn debut score =|93|
-|-1||11|16|
-|2||12|0|
-turn fin de score =|93|
-turn read =|94|
-turn fin mapping =|94|
-turn create map =|94|
-turn debut score =|94|
-|0||10|32|
-|1||10|31|
-|1||11|29|
-|1||12|27|
-|1||13|25|
-|4||7|0|
-turn fin de score =|94|
-turn read =|95|
-turn fin mapping =|95|
-turn create map =|95|
-turn debut score =|95|
-|0||11|31|
-|1||12|29|
-|1||13|27|
-|1||14|25|
-|4||9|0|
-turn fin de score =|95|
-turn read =|96|
-turn fin mapping =|96|
-turn create map =|96|
-turn debut score =|96|
-|0||10|48|
-|3||0|0|
-turn fin de score =|96|
-turn read =|97|
-turn fin mapping =|97|
-turn create map =|97|
-turn debut score =|97|
-|0||10|16|
-|3||12|0|
-turn fin de score =|97|
-turn read =|98|
-turn fin mapping =|98|
-turn create map =|98|
-turn debut score =|98|
-|0||11|16|
-|4||2|0|
-turn fin de score =|98|
-turn read =|99|
-turn fin mapping =|99|
-turn create map =|99|
-turn debut score =|99|
-|0||10|33|
-|0||11|31|
-|3||4|0|
-turn fin de score =|99|
-turn read =|100|
-turn fin mapping =|100|
-turn create map =|100|
-turn debut score =|100|
-|0||11|16|
-|4||5|0|
-turn fin de score =|100|
-turn read =|101|
-turn fin mapping =|101|
-turn create map =|101|
-turn debut score =|101|
-|0||10|33|
-|0||11|31|
-|4||0|0|
-turn fin de score =|101|
-turn read =|102|
-turn fin mapping =|102|
-turn create map =|102|
-turn debut score =|102|
-|0||10|17|
-|0||11|16|
-|1||12|15|
-|1||13|14|
-|1||14|13|
-|1||15|12|
-|3||7|0|
-turn fin de score =|102|
-turn read =|103|
-turn fin mapping =|103|
-turn create map =|103|
-turn debut score =|103|
-|0||11|16|
-|4||10|0|
-turn fin de score =|103|
-turn read =|104|
-turn fin mapping =|104|
-turn create map =|104|
-turn debut score =|104|
-|0||10|33|
-|4||2|0|
-turn fin de score =|104|
-turn read =|105|
-turn fin mapping =|105|
-turn create map =|105|
-turn debut score =|105|
-|0||10|33|
-|0||11|31|
-|4||4|0|
-turn fin de score =|105|
-turn read =|106|
-turn fin mapping =|106|
-turn create map =|106|
-turn debut score =|106|
-|0||10|16|
-|5||4|0|
-turn fin de score =|106|
-turn read =|107|
-turn fin mapping =|107|
-turn create map =|107|
-turn debut score =|107|
-|0||11|16|
-|5||6|0|
-turn fin de score =|107|
-turn read =|108|
-turn fin mapping =|108|
-turn create map =|108|
-turn debut score =|108|
-|0||9|33|
-|5||-1|0|
-turn fin de score =|108|
-turn read =|109|
-turn fin mapping =|109|
-turn create map =|109|
-turn debut score =|109|
-|0||10|16|
-|5||7|0|
-turn fin de score =|109|
-turn read =|110|
-turn fin mapping =|110|
-turn create map =|110|
-turn debut score =|110|
-|0||10|17|
-|0||11|16|
-|1||12|15|
-|1||13|14|
-|1||14|13|
-|1||15|12|
-|4||11|0|
-turn fin de score =|110|
-turn read =|111|
-turn fin mapping =|111|
-turn create map =|111|
-turn debut score =|111|
-|0||10|16|
-|6||0|0|
-turn fin de score =|111|
-turn read =|112|
-turn fin mapping =|112|
-turn create map =|112|
-turn debut score =|112|
-turn fin de score =|112|
+|57||58|551|
+|58||56|543|
+|28||26|77|
+|28||27|75|
+|55||67|74|
+|21||27|304|
+|21||28|300|
+|22||27|299|
+|22||28|295|
+|23||28|290|
+|62||60|275|
+|27||30|353|
+|27||31|348|
+|27||32|343|
+|27||33|338|
+|28||33|332|
+|29||33|326|
+|62||56|126|
+|14||20|497|
+|14||26|453|
+|15||27|439|
+|16||27|431|
+|56||63|806|
+|28||26|396|
+|28||36|333|
+|29||36|327|
+|30||36|321|
+|47||61|158|
+|48||58|152|
+|27||30|313|
+|27||31|308|
+|27||32|303|
+|27||33|298|
+|27||34|293|
+|27||36|283|
+|27||37|278|
+|28||38|268|
+|28||39|263|
+|28||40|258|
+|31||40|241|
+|52||55|227|
+|57||56|205|
+|26||19|254|
+|26||28|216|
+|27||31|200|
+|28||32|192|
+|29||33|184|
+|53||61|488|
+|54||58|464|
+|29||18|58|
+|29||23|54|
+|29||26|49|
+|30||29|45|
+|31||33|40|
+|32||33|39|
+|54||54|75|
+|28||25|229|
+|28||35|186|
+|29||38|170|
+|30||42|150|
+|31||43|142|
+|47||57|65|
+|24||20|220|
+|24||25|201|
+|24||26|198|
+|24||28|187|
+|25||31|171|
+|26||32|165|
+|26||33|162|
+|26||35|153|
+|26||36|150|
+|26||37|143|
+|27||39|131|
+|28||38|130|
+|28||39|126|
+|29||39|121|
+|55||54|28|
+|20||18|214|
+|20||23|195|
+|20||24|192|
+|20||26|181|
+|21||29|165|
+|22||30|159|
+|22||31|156|
+|22||33|147|
+|22||34|144|
+|22||35|137|
+|23||38|121|
+|24||38|116|
+|25||38|113|
+|26||38|108|
+|50||52|146|
+|27||30|50|
+|27||31|49|
+|27||32|48|
+|27||33|47|
+|27||34|46|
+|27||36|44|
+|27||37|43|
+|28||38|41|
+|28||39|40|
+|28||40|39|
+|29||41|37|
+|29||43|35|
+|29||44|34|
+|29||46|32|
+|30||47|30|
+|30||48|29|
+|30||49|28|
+|31||49|0|
+|49||55|151|
+|22||27|469|
+|22||28|459|
+|22||29|449|
+|22||30|439|
+|22||31|429|
+|22||33|409|
+|22||34|399|
+|23||37|359|
+|24||39|328|
+|24||40|319|
+|24||41|309|
+|24||43|289|
+|25||46|249|
+|26||48|216|
+|27||49|196|
+|28||49|186|
+|29||49|176|
+|46||52|73|
+|47||50|68|
+|17||30|184|
+|17||31|180|
+|17||32|176|
+|17||33|172|
+|17||34|168|
+|17||36|160|
+|17||37|156|
+|18||38|148|
+|18||39|144|
+|18||40|140|
+|19||41|132|
+|19||43|124|
+|19||44|120|
+|19||46|112|
+|20||47|104|
+|20||48|100|
+|20||49|96|
+|21||50|88|
+|21||52|80|
+|22||53|72|
+|22||54|68|
+|23||55|60|
+|24||55|53|
+|25||55|46|
+|36||51|46|
+|19||22|260|
+|19||27|235|
+|19||28|230|
+|19||30|215|
+|20||33|191|
+|21||35|176|
+|21||37|163|
+|21||38|158|
+|21||39|149|
+|22||42|125|
+|23||44|110|
+|23||45|101|
+|24||47|83|
+|25||49|65|
+|26||50|57|
+|27||50|51|
+|29||47|46|
+|29||48|39|
+|30||48|26|
+|24||19|238|
+|24||28|194|
+|25||31|170|
+|26||36|137|
+|26||37|128|
+|27||40|104|
+|28||42|89|
+|28||43|80|
+|29||45|62|
+|30||47|46|
+|31||48|38|
+|32||48|32|
+|33||48|26|
+|34||48|20|
+|35||48|14|
+|39||15|28|
+|19||29|36|
+|20||29|32|
+|20||31|30|
+|21||33|27|
+|22||34|25|
+|22||35|24|
+|22||36|23|
+|22||37|22|
+|22||38|21|
+|23||40|18|
+|23||41|17|
+|23||42|16|
+|23||43|15|
+|23||44|14|
+|23||45|13|
+|23||46|12|
+|25||47|9|
+|26||48|7|
+|26||49|6|
+|26||50|5|
+|26||52|3|
+|29||53|1|
+|28||51|12|
+|30||57|3|
+|17||25|297|
+|18||23|290|
+|18||33|289|
+|18||34|281|
+|18||35|273|
+|19||36|257|
+|19||38|241|
+|19||39|233|
+|19||41|217|
+|20||42|201|
+|20||43|193|
+|20||44|185|
+|21||45|169|
+|21||47|153|
+|22||48|137|
+|22||49|129|
+|23||50|113|
+|23||51|105|
+|24||42|90|
+|25||43|70|
+|26||44|54|
+|28||54|43|
+|31||56|24|
+|38||50|51|
+|41||58|29|
+|28||20|180|
+|29||18|174|
+|30||19|164|
+|30||20|158|
+|31||20|153|
+|31||40|152|
+|32||28|109|
+|33||28|104|
+|33||29|98|
+|33||30|92|
+|33||31|86|
+|33||36|64|
+|34||36|59|
+|35||37|49|
+|36||40|29|
+|36||41|23|
+|36||42|19|
+|37||43|11|
+|38||42|9|
+|40||50|10|
+|27||15|104|
+|28||14|98|
+|29||15|92|
+|30||15|89|
+|30||16|85|
+|30||17|83|
+|30||18|79|
+|30||19|77|
+|31||24|59|
+|32||24|56|
+|32||25|52|
+|32||32|32|
+|33||32|29|
+|34||33|23|
+|35||36|15|
+|36||36|14|
+|37||35|8|
+|38||35|5|
+|41||48|35|
+|44||59|34|
+|28||17|250|
+|29||16|244|
+|30||17|230|
+|31||17|223|
+|31||18|215|
+|31||38|207|
+|32||26|153|
+|33||26|146|
+|33||27|138|
+|33||28|130|
+|33||29|122|
+|33||30|114|
+|33||34|90|
+|34||34|83|
+|35||35|69|
+|36||38|65|
+|37||38|60|
+|40||35|34|
+|43||51|20|
+|41||47|11|
+|26||20|236|
+|28||21|215|
+|29||22|199|
+|29||23|191|
+|29||25|177|
+|30||30|138|
+|31||31|122|
+|31||32|114|
+|31||33|106|
+|31||38|75|
+|33||40|51|
+|35||41|38|
+|36||40|30|
+|37||39|26|
+|42||57|24|
+|37||48|3|
+|21||24|166|
+|22||23|156|
+|23||23|148|
+|25||24|133|
+|26||25|121|
+|26||27|111|
+|26||29|101|
+|26||30|96|
+|26||31|91|
+|26||32|86|
+|27||33|78|
+|27||36|61|
+|27||37|56|
+|27||38|51|
+|27||39|46|
+|27||40|41|
+|28||41|33|
+|30||43|23|
+|40||59|11|
+|39||48|2|
+|40||52|1|
+|41||58|0|
+|19||28|93|
+|22||33|66|
+|23||34|60|
+|23||35|57|
+|23||36|54|
+|23||37|51|
+|24||40|39|
+|24||41|36|
+|24||42|33|
+|24||43|30|
+|24||44|27|
+|24||45|24|
+|26||47|14|
+|29||48|9|
+|24||46|13|
+|19||19|169|
+|20||18|159|
+|21||18|150|
+|23||19|132|
+|24||24|92|
+|25||25|80|
+|25||26|74|
+|25||27|68|
+|25||35|63|
+|26||31|38|
+|26||32|32|
+|26||33|26|
+|26||34|20|
+|26||35|18|
+|35||42|23|
+|21||27|94|
+|22||28|86|
+|23||28|82|
+|23||29|77|
+|24||30|67|
+|24||31|62|
+|24||32|59|
+|24||33|54|
+|24||34|51|
+|25||37|38|
+|25||38|33|
+|26||39|23|
+|26||40|18|
+|26||43|12|
+|27||43|8|
+|28||48|7|

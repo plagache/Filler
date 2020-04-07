@@ -31,14 +31,14 @@
 ** strerror **
 */
 
-int		end_of_read(t_filler *info)
+int		end_of_read(char *str)
 {
 	int backslash_n = 0;
 	char *ptr;
 	int c;
 
 	c = 0;
-	if ((ptr = ft_strstr(info->output_vm, "Piece ")) == NULL)
+	if ((ptr = ft_strstr(str, "Piece ")) == NULL)
 		return (FAILURE);
 	if (ft_strchr(ptr, '\n') == NULL)
 		return (FAILURE);
@@ -48,26 +48,30 @@ int		end_of_read(t_filler *info)
 		backslash_n -= (ptr[c] == '\n' ? 1 : 0);
 		c++;
 	}
-	if (backslash_n == -1)
-		return (SUCCESS);
-	return (FAILURE);
+	if (backslash_n != -1)
+		return (FAILURE);
+	return (SUCCESS);
 }
 
 int		read_function(int fd_debug, t_filler *info)
 {
 	char	buff[BUFF_SIZE + 1];
+	char	*str;
 	int		ret = 0;
 
 	(void)fd_debug;
-	if (info->output_vm == NULL)
-		info->output_vm = ft_strnew(0);
-	while (end_of_read(info) != SUCCESS)
+	str = ft_strnew(0);
+	if (str == NULL)
+		return(ret);
+	while (end_of_read(str) != SUCCESS)
 	{
 		ret = read(0, buff, BUFF_SIZE);
 		buff[ret] = '\0';
-		info->output_vm = ft_strjoinfree(1, info->output_vm, buff);
+		str = ft_strjoinfree(1, str, buff);
+	//	dprintf(fd_debug, "ret%i\n", ret);
 	}
-//	dprintf(fd_debug, "ret =|%i|\n|%s|\n", ret, info->output_vm);
+	info->output_vm = str;
+	//dprintf(fd_debug, "ret =|%i|\n|%s|\n", ret, info->output_vm);
 //	dprintf(fd_debug, "turn read =|%i|\n", info->turn);
 	return (ret);
 }

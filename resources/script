@@ -2,5 +2,6 @@
 
 rm output.txt
 touch output.txt
-./filler_vm -f maps/map00 -p1 players/carli.filler -p2 players/plagache.filler > result.txt
-less result.txt
+#./filler_vm -f maps/map02 -p1 players/plagache.filler -p2 players/plagache.filler > result.txt
+#less result.txt
+tail -f output.txt
