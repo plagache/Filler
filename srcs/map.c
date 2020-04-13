@@ -6,32 +6,15 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 14:31:49 by plagache          #+#    #+#             */
-/*   Updated: 2020/02/12 16:36:28 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/13 17:48:31 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/includes/ft_printf.h"
-#include <unistd.h>
+#include "filler.h"
+#include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include "../includes/filler.h"
-#include "../libft/includes/libft.h"
 
-/*
-** #include "../libft/includes/ft_printf.h" **
-** my printf lib **
-** #include <unistd.h> **
-** write read **
-** #include <stdlib.h> **
-** malloc **
-** #include <stdio.h> **
-** perror **
-** #include <string.h> **
-** strerror **
-*/
-
-int			fill_base_map(t_filler *info)
+static	int	fill_base_map(t_filler *info)
 {
 	int line;
 	int column;
@@ -44,12 +27,12 @@ int			fill_base_map(t_filler *info)
 		{
 			if (ft_strchr(info->pl_char,
 					info->map[line][column + 4]) != NULL)
-				info->heat_map[line][column] = pl_value;
+				info->heat_map[line][column] = PL_VALUE;
 			else if (ft_strchr(info->ad_char,
 					info->map[line][column + 4]) != NULL)
-				info->heat_map[line][column] = ad_value;
+				info->heat_map[line][column] = AD_VALUE;
 			else
-				info->heat_map[line][column] = base_value;
+				info->heat_map[line][column] = BASE_VALUE;
 			column++;
 		}
 		line++;
@@ -57,7 +40,7 @@ int			fill_base_map(t_filler *info)
 	return (SUCCESS);
 }
 
-int			fill_piece(t_filler *info)
+static	int	fill_piece(t_filler *info)
 {
 	int line;
 	int column;
@@ -69,9 +52,9 @@ int			fill_piece(t_filler *info)
 		while (column < info->p_column)
 		{
 			if (info->piece[line][column] == '*')
-				info->heat_piece[line][column] = star_value;
+				info->heat_piece[line][column] = STAR_VALUE;
 			else
-				info->heat_piece[line][column] = base_value;
+				info->heat_piece[line][column] = BASE_VALUE;
 			column++;
 		}
 		line++;
@@ -79,7 +62,7 @@ int			fill_piece(t_filler *info)
 	return (SUCCESS);
 }
 
-int			malloc_map(t_filler *info)
+static	int	malloc_map(t_filler *info)
 {
 	int c;
 
@@ -100,7 +83,7 @@ int			malloc_map(t_filler *info)
 	return (SUCCESS);
 }
 
-int			malloc_piece(t_filler *info)
+static	int	malloc_piece(t_filler *info)
 {
 	int c;
 
@@ -129,6 +112,5 @@ int			create_map(t_filler *info)
 			|| fill_piece(info) == FAILURE)
 		return (FAILURE);
 	call_mapping(info);
-//	dprintf(info->fd_debug, "turn create map =|%i|\n", info->turn);
 	return (SUCCESS);
 }

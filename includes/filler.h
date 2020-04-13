@@ -1,29 +1,36 @@
-#ifndef	FILLER_H
-# define FILLER_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   filler.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/04/13 17:25:48 by plagache          #+#    #+#             */
+/*   Updated: 2020/04/13 17:47:29 by plagache         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#ifndef FILLER_H
+# define FILLER_H
 
 # define BUFF_SIZE 4096
 
 # define FALSE 0
 # define TRUE 1
 
-# define SUCCESS 0
-# define FAILURE 1
+# define SUCCESS -31415
+# define FAILURE -43
 
-# define base_value 0
-# define pl_value -1
-# define ad_value -2
-# define star_value -3
+# define BASE_VALUE 0
+# define PL_VALUE -1
+# define AD_VALUE -2
+# define STAR_VALUE -3
 
 typedef struct		s_filler
 {
 	char	**info_vm;
 	char	**map;
-	char 	**piece;
+	char	**piece;
 	short	**heat_map;
 	short	**heat_piece;
 	char	*output_vm;
@@ -38,13 +45,11 @@ typedef struct		s_filler
 	int		diff_c;
 	int		m_line;
 	int		m_column;
-	int		fd_debug;
 	int		turn;
 }					t_filler;
 
-int					read_function(int fd, t_filler *info);
+int					read_function(t_filler *info);
 int					get_info(t_filler *info, int turn);
-void				free_arr(void **arr);
 int					create_map(t_filler *info);
 int					print_map(short **board, int fd, t_filler *info);
 int					print_piece(short **board, int fd, t_filler *info);

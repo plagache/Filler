@@ -19,9 +19,11 @@ OBJDIR= out
 
 LIBA= $(LIBDIR)/libft.a
 
-CFLAGS= -g -Wall -Werror -Wextra
+CFLAGS= -Wall -Werror -Wextra
 
-HEADER = includes/filler.h
+HEADER = includes
+
+LIB_HEADER = $(LIBDIR)/includes
 
 CC = clang
 
@@ -34,7 +36,7 @@ $(NAME): $(OBJ)
 
 out/%.o : srcs/%.c
 	mkdir -p out
-	$(CC) -I $(LIBDIR) $(CFLAGS) -o $@ -c $<
+	$(CC) -I $(HEADER) -I $(LIB_HEADER) -I $(LIBDIR) $(CFLAGS) -o $@ -c $<
 
 clean:
 		$(RM) -rf $(OBJDIR)

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-make
+make re
 #rm -f output.txt
 rm -f resources/players/plagache.filler
 mv plagache.filler resources/players/

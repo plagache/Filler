@@ -6,37 +6,22 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 14:31:49 by plagache          #+#    #+#             */
-/*   Updated: 2019/11/28 17:50:03 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/13 17:44:13 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/includes/ft_printf.h"
 #include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include "../includes/filler.h"
-#include "../libft/includes/libft.h"
+#include "filler.h"
+#include "libft.h"
 
-/*
-** #include "../libft/includes/ft_printf.h" **
-** my printf lib **
-** #include <unistd.h> **
-** write read **
-** #include <stdlib.h> **
-** malloc **
-** #include <stdio.h> **
-** perror **
-** #include <string.h> **
-** strerror **
-*/
-
-int		end_of_read(char *str)
+static	int	end_of_read(char *str)
 {
-	int backslash_n = 0;
-	char *ptr;
-	int c;
+	char	*ptr;
+	int		backslash_n;
+	int		c;
 
+	backslash_n = 0;
 	c = 0;
 	if ((ptr = ft_strstr(str, "Piece ")) == NULL)
 		return (FAILURE);
@@ -53,25 +38,44 @@ int		end_of_read(char *str)
 	return (SUCCESS);
 }
 
-int		read_function(int fd_debug, t_filler *info)
+static	int	check_dev(int len, char *buff, char *str_to_free)
+{
+	int c;
+
+	c = 0;
+	if (!buff || buff[c] == '\0')
+		return (FAILURE);
+	while (c < len)
+	{
+		if (buff[c] <= 0)
+		{
+			free(str_to_free);
+			return (FAILURE);
+		}
+		c++;
+	}
+	return (SUCCESS);
+}
+
+int			read_function(t_filler *info)
 {
 	char	buff[BUFF_SIZE + 1];
 	char	*str;
-	int		ret = 0;
+	int		ret;
 
-	(void)fd_debug;
 	str = ft_strnew(0);
+	ret = 0;
 	if (str == NULL)
-		return(ret);
+		return (ret);
 	while (end_of_read(str) != SUCCESS)
 	{
-		ret = read(0, buff, BUFF_SIZE);
+		if ((ret = read(0, buff, BUFF_SIZE)) < 0)
+			return (FAILURE);
 		buff[ret] = '\0';
+		if (check_dev(ret, buff, str) == FAILURE)
+			return (FAILURE);
 		str = ft_strjoinfree(1, str, buff);
-	//	dprintf(fd_debug, "ret%i\n", ret);
 	}
 	info->output_vm = str;
-	//dprintf(fd_debug, "ret =|%i|\n|%s|\n", ret, info->output_vm);
-//	dprintf(fd_debug, "turn read =|%i|\n", info->turn);
 	return (ret);
 }

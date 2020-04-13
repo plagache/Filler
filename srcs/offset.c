@@ -6,37 +6,14 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 11:55:30 by plagache          #+#    #+#             */
-/*   Updated: 2020/02/27 11:55:38 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/13 17:44:36 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/includes/ft_printf.h"
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include "../includes/filler.h"
-#include "../libft/includes/libft.h"
+#include "filler.h"
+#include "libft.h"
 
-/*
-** #include "../libft/includes/ft_printf.h" **
-** my printf lib **
-** #include <unistd.h> **
-** write read **
-** #include <stdlib.h> **
-** malloc **
-** #include <stdio.h> **
-** perror **
-** #include <string.h> **
-** strerror **
-*/
-
-// take the piece form
-// calculate diff
-// only needed for placebale
-
-
-void		diff_piece(t_filler *info)
+static void	diff_piece(t_filler *info)
 {
 	int line;
 	int column;
@@ -56,16 +33,9 @@ void		diff_piece(t_filler *info)
 			info->diff_c = (info->p_column - 1) - column;
 		column--;
 	}
-//	dprintf(info->fd_debug, "        diffline |%i|\n diffcol|%i|\n", info->diff_l, info->diff_c);
 }
 
-
-// take the piece 
-// calculate the offset
-// is needed for placebale
-//
-
-void	offset_piece(t_filler *info)
+void		offset_piece(t_filler *info)
 {
 	int line;
 	int column;
@@ -85,6 +55,5 @@ void	offset_piece(t_filler *info)
 			info->offset_c = column;
 		column++;
 	}
-//	dprintf(info->fd_debug, "        offsetline |%i|\n offsetcol|%i|\n", info->offset_l, info->offset_c);
 	diff_piece(info);
 }
