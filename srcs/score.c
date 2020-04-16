@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/13 17:32:59 by plagache          #+#    #+#             */
-/*   Updated: 2020/04/13 17:50:03 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/16 16:02:08 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static	int	calcul_score(t_filler *info, int c_line, int c_column)
 	while (line < info->p_line - info->diff_l)
 	{
 		column = info->offset_c;
-		while (column < info->p_column)
+		while (column < info->p_column - info->diff_c)
 		{
 			if (info->heat_map[line + c_line][column + c_column] != AD_VALUE
 				&& info->heat_map[line + c_line][column + c_column] != PL_VALUE
@@ -72,7 +72,7 @@ void		best_score(t_filler *info)
 	int column;
 
 	line = 0 - info->offset_l;
-	info->pos[2] = 9999;
+	info->pos[2] = MAX_VALUE;
 	while ((line + (info->p_line - info->diff_l)) < info->m_line)
 	{
 		column = 0 - info->offset_c;

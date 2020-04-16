@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/13 17:25:48 by plagache          #+#    #+#             */
-/*   Updated: 2020/04/13 17:47:29 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/16 13:45:44 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 # define TRUE 1
 
 # define SUCCESS -31415
-# define FAILURE -43
+# define FAILURE -314159
 
 # define BASE_VALUE 0
 # define PL_VALUE -1
 # define AD_VALUE -2
 # define STAR_VALUE -3
+# define MAX_VALUE 9999
 
 typedef struct		s_filler
 {
@@ -51,10 +52,9 @@ typedef struct		s_filler
 int					read_function(t_filler *info);
 int					get_info(t_filler *info, int turn);
 int					create_map(t_filler *info);
-int					print_map(short **board, int fd, t_filler *info);
-int					print_piece(short **board, int fd, t_filler *info);
 int					call_mapping(t_filler *info);
 void				best_score(t_filler *info);
 void				programme_clean(t_filler *info);
 void				offset_piece(t_filler *info);
+int					check_size(t_filler *info);
 #endif

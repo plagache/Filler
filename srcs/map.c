@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 14:31:49 by plagache          #+#    #+#             */
-/*   Updated: 2020/04/13 17:48:31 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/15 19:26:05 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,5 @@ int			create_map(t_filler *info)
 			|| fill_base_map(info) == FAILURE
 			|| fill_piece(info) == FAILURE)
 		return (FAILURE);
-	call_mapping(info);
 	return (SUCCESS);
 }

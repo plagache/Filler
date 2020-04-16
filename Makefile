@@ -19,7 +19,7 @@ OBJDIR= out
 
 LIBA= $(LIBDIR)/libft.a
 
-CFLAGS= -Wall -Werror -Wextra
+CFLAGS= -Wall -Werror -Wextra -g -fsanitize=address -fno-omit-frame-pointer
 
 HEADER = includes
 

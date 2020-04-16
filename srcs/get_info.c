@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 12:43:08 by plagache          #+#    #+#             */
-/*   Updated: 2020/04/13 17:41:58 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/16 14:11:28 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,5 @@ int				get_info(t_filler *info, int turn)
 	if (turn == 0)
 		find_player(info);
 	ft_strdel(&(info->output_vm));
-	if (create_map(info) == FAILURE)
-		return (FAILURE);
 	return (SUCCESS);
 }

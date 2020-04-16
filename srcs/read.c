@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 14:31:49 by plagache          #+#    #+#             */
-/*   Updated: 2020/04/13 17:44:13 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/16 15:49:30 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,10 +70,16 @@ int			read_function(t_filler *info)
 	while (end_of_read(str) != SUCCESS)
 	{
 		if ((ret = read(0, buff, BUFF_SIZE)) < 0)
+		{
+			free(str);
 			return (FAILURE);
+		}
 		buff[ret] = '\0';
 		if (check_dev(ret, buff, str) == FAILURE)
+		{
+			free(str);
 			return (FAILURE);
+		}
 		str = ft_strjoinfree(1, str, buff);
 	}
 	info->output_vm = str;
