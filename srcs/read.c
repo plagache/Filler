@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 14:31:49 by plagache          #+#    #+#             */
-/*   Updated: 2020/04/16 15:49:30 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/21 18:17:48 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,10 @@ static	int	check_dev(int len, char *buff, char *str_to_free)
 
 	c = 0;
 	if (!buff || buff[c] == '\0')
+	{
+		free(str_to_free);
 		return (FAILURE);
+	}
 	while (c < len)
 	{
 		if (buff[c] <= 0)
@@ -53,6 +56,16 @@ static	int	check_dev(int len, char *buff, char *str_to_free)
 			return (FAILURE);
 		}
 		c++;
+	}
+	return (SUCCESS);
+}
+
+static	int	check_board(char *str)
+{
+	if (ft_strstr(str, "Plateau ") == NULL)
+	{
+		free(str);
+		return (FAILURE);
 	}
 	return (SUCCESS);
 }
@@ -76,12 +89,11 @@ int			read_function(t_filler *info)
 		}
 		buff[ret] = '\0';
 		if (check_dev(ret, buff, str) == FAILURE)
-		{
-			free(str);
 			return (FAILURE);
-		}
 		str = ft_strjoinfree(1, str, buff);
 	}
+	if (check_board(str) == FAILURE)
+		return (FAILURE);
 	info->output_vm = str;
 	return (ret);
 }
