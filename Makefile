@@ -6,7 +6,7 @@
 #    By: plagache <plagache@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 01:45:58 by plagache          #+#    #+#              #
-#    Updated: 2020/04/21 16:26:25 by plagache         ###   ########.fr        #
+#    Updated: 2020/04/22 21:43:05 by plagache         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,14 +63,14 @@ out/%.o: srcs/%.c $(HEADER) $(LIB_HEADER)
 clean:
 		$(RM) -rf $(OBJDIR)
 		printf "$(LNECLR)$(PURPLE)filler objects cleaned$(WHITE)\n"
-		make clean -C $(LIBDIR)
+		make clean -s -C $(LIBDIR)
 
 fclean:
 		make fclean -s -C $(LIBDIR)
 		$(RM) -f $(NAME)
+		printf "$(LNECLR)$(RED)filler project cleaned$(WHITE)\n"
 		$(RM) -rf $(OBJDIR)
 		printf "$(LNECLR)$(PURPLE)filler objects cleaned$(WHITE)\n"
-		printf "$(LNECLR)$(RED)filler project cleaned$(WHITE)\n"
 
 re: fclean all
 	printf "$(BLUE)re filler done$(WHITE)\n"

@@ -16,13 +16,16 @@ FILLER_H	includes/filler.h	14;"	d
 FLAGSMAX	libft/includes/arg.h	16;"	d
 FT_PRINTF_H	libft/includes/ft_printf.h	14;"	d
 GET_NEXT_LINE_H	libft/includes/get_next_line.h	14;"	d
+H	libft/libft.a	/^ELF/;"	v
 K	resources/players/plagache.filler.dSYM/Contents/Resources/DWARF/plagache.filler	/^ƒJKJKJJ)J< JK&‚<JJKJJ)XJfJK&‚<tJK/;"	v
 LIBFT_H	libft/includes/libft.h	14;"	d
+MAX_VALUE	includes/filler.h	28;"	d
 PL_VALUE	includes/filler.h	25;"	d
 STAR_VALUE	includes/filler.h	27;"	d
 SUCCESS	includes/filler.h	21;"	d
 TRUE	includes/filler.h	19;"	d
 TRUE	libft/includes/libft.h	20;"	d
+Z	libft/libft.a	/^/;"	v
 ad_char	includes/filler.h	/^	char	ad_char[3];$/;"	m	struct:s_filler
 add_strings	libft/srcs/printf/float_tools.c	/^void	add_strings(char *dst, char *src, int len)$/;"	f
 apply_d_rounding	libft/srcs/printf/float_tools.c	/^void	apply_d_rounding(t_d_arrs *a_ptr, int prec)$/;"	f
@@ -41,10 +44,13 @@ calc_len_unsigned	libft/srcs/printf/unsigned_tools.c	/^int		calc_len_unsigned(t_
 calcul_score	srcs/score.c	/^static	int	calcul_score(t_filler *info, int c_line, int c_column)$/;"	f	file:
 call_mapping	srcs/heat_map.c	/^int			call_mapping(t_filler *info)$/;"	f
 challenger	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
+check_board	srcs/read.c	/^static	int	check_board(char *str)$/;"	f	file:
 check_conversion	libft/srcs/printf/ft_printf.c	/^int			check_conversion(const char *str)$/;"	f
 check_dev	srcs/read.c	/^static	int	check_dev(int len, char *buff, char *str_to_free)$/;"	f	file:
 check_int_struct	libft/srcs/printf/int_tools.c	/^int		check_int_struct(t_conv_id *ptr)$/;"	f
 check_octal_struct	libft/srcs/printf/octal_tools.c	/^int	check_octal_struct(t_conv_id *s_ptr)$/;"	f
+check_p_size	srcs/tools.c	/^static	int		check_p_size(t_filler *info)$/;"	f	file:
+check_size	srcs/tools.c	/^int				check_size(t_filler *info)$/;"	f
 check_special_value	libft/srcs/printf/special.c	/^int		check_special_value(t_s_e_m *dble_ptr)$/;"	f
 check_unsigned_struct	libft/srcs/printf/unsigned_tools.c	/^int		check_unsigned_struct(t_conv_id *ptr)$/;"	f
 content	libft/includes/get_next_line.h	/^	char			*content;$/;"	m	struct:s_data
@@ -80,6 +86,7 @@ flags	libft/includes/arg.h	/^	char	flags;$/;"	m	struct:s_conv_info
 flags_in_struct	libft/srcs/printf/pflags.c	/^void	flags_in_struct(char c, t_conv_id *struct_ptr)$/;"	f
 format	tags	/^!_TAG_FILE_FORMAT	2	\/extended format; --format=1 will not append ;" to lines\/$/;"	v
 free_arr	libft/srcs/mem/ft_free_arr.c	/^void		free_arr(void **arr)$/;"	f
+free_info	srcs/tools.c	/^void			free_info(t_filler *info)$/;"	f
 free_ptr	srcs/tools.c	/^static	void	free_ptr(t_filler *info)$/;"	f	file:
 free_struct	libft/srcs/get_next_line/get_next_line.c	/^void			free_struct(t_data *current, t_list **lst)$/;"	f
 ft_2lstaddend	libft/srcs/lst/ft_2lstaddend.c	/^void	ft_2lstaddend(t_dlist **lst, t_dlist *link)$/;"	f
@@ -232,6 +239,7 @@ no_flag_unsigned	libft/srcs/printf/unsigned.c	/^void	no_flag_unsigned(t_conv_id 
 null_ptr	libft/srcs/printf/address.c	/^int		null_ptr(t_conv_id *s_ptr, int len)$/;"	f
 null_ptr_zero	libft/srcs/printf/address.c	/^int		null_ptr_zero(t_conv_id *s_ptr, int len)$/;"	f
 null_string	libft/srcs/printf/string.c	/^int			null_string(t_conv_id *s_ptr)$/;"	f
+occurrence_of	libft/srcs/string/ft_occurence_of.c	/^int		occurrence_of(char *str, char c)$/;"	f
 offset_c	includes/filler.h	/^	int		offset_c;$/;"	m	struct:s_filler
 offset_l	includes/filler.h	/^	int		offset_l;$/;"	m	struct:s_filler
 offset_piece	srcs/offset.c	/^void		offset_piece(t_filler *info)$/;"	f
@@ -264,6 +272,8 @@ s_list	libft/includes/libft.h	/^typedef struct		s_list$/;"	s
 s_long_double_arrs	libft/includes/arg.h	/^typedef struct	s_long_double_arrs$/;"	s
 s_point	libft/includes/arg.h	/^typedef struct	s_point$/;"	s
 score	resources/filler_vm	/^	attr_accessor :score, :piece_char, :score, :stdin, :live, :file_name$/;"	v
+score_p1	resources/correction	/^		score_p1=$((score_p1 + 1));$/;"	v
+score_p2	resources/correction	/^		score_p2=$((score_p2 + 1));$/;"	v
 search_value	srcs/heat_map.c	/^static void	search_value(t_filler *info, int value, int to_fill)$/;"	f	file:
 sid	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
 special_value	libft/srcs/printf/special_tools.c	/^void	special_value(t_s_e_m *dble_ptr, t_conv_id *s_ptr, int len)$/;"	f
@@ -292,11 +302,13 @@ turn	includes/filler.h	/^	int		turn;$/;"	m	struct:s_filler
 u	resources/players/plagache.filler.dSYM/Contents/Resources/DWARF/plagache.filler	/^½Pt1tJ<	‚3º<gZ"J<‚žJKJJJXJ=!JJJXJ=JJYJ<"¬JJKJXf*J\/J2fAJJg»u	/;"	v
 unsigned_len_base	libft/srcs/printf/global_tools.c	/^int	unsigned_len_base(unsigned long long val, unsigned base)$/;"	f
 verbose	resources/filler_vm	/^	attr_accessor :map, :player, :challenger, :interactif, :sid, :verbose, :time, :modif_time$/;"	v
+w	resources/champions/carli.filler	/^/;"	v
 wait_thr	resources/filler_vm	/^			self.stdin, @stdout, @wait_thr = Open3.popen2(@file_name)$/;"	v
 width	libft/includes/arg.h	/^	int		width;$/;"	m	struct:s_conv_info
 width	libft/srcs/printf/pwidth.c	/^int		width(char *ptr, int end, t_conv_id *struct_ptr)$/;"	f
 width_in_struct	libft/srcs/printf/pwidth.c	/^void	width_in_struct(char c, t_conv_id *struct_ptr)$/;"	f
 written	libft/includes/arg.h	/^	int	written;$/;"	m	struct:s_point
+z	libft/libft.a	/^Î/;"	v
 zero_flag_double	libft/srcs/printf/double.c	/^void	zero_flag_double(t_d_arrs *a_ptr, t_conv_id *s_ptr, t_s_e_m *dble_ptr,$/;"	f
 zero_flag_hexa	libft/srcs/printf/hexa.c	/^void	zero_flag_hexa(t_conv_id *s_ptr, int len, unsigned long long nb)$/;"	f
 zero_flag_hexa_upper	libft/srcs/printf/hexa_upper.c	/^void	zero_flag_hexa_upper(t_conv_id *s_ptr, int len, unsigned long long nb)$/;"	f

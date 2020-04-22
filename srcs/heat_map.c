@@ -6,7 +6,7 @@
 /*   By: plagache <plagache@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 12:46:02 by plagache          #+#    #+#             */
-/*   Updated: 2020/04/13 17:48:50 by plagache         ###   ########.fr       */
+/*   Updated: 2020/04/22 21:32:45 by plagache         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,18 @@ static void	fill_map_value(t_filler *info, int line, int column, int value)
 		info->heat_map[line][column - 1] = value;
 	if (column + 1 < info->m_column && info->heat_map[line][column + 1] == 0)
 		info->heat_map[line][column + 1] = value;
+	if (line - 1 >= 0 && column - 1 >= 0
+		&& info->heat_map[line - 1][column - 1] == 0)
+		info->heat_map[line - 1][column - 1] = value;
+	if (line + 1 < info->m_line && column - 1 >= 0
+		&& info->heat_map[line + 1][column - 1] == 0)
+		info->heat_map[line + 1][column - 1] = value;
+	if (column + 1 < info->m_column && line - 1 >= 0
+		&& info->heat_map[line - 1][column + 1] == 0)
+		info->heat_map[line - 1][column + 1] = value;
+	if (line + 1 < info->m_line && column + 1 < info->m_column
+		&& info->heat_map[line + 1][column + 1] == 0)
+		info->heat_map[line + 1][column + 1] = value;
 }
 
 static void	search_value(t_filler *info, int value, int to_fill)
